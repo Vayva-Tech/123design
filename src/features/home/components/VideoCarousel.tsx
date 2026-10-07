@@ -47,11 +47,6 @@ export function VideoCarousel({ videos, autoAdvanceMs = 6000 }: VideoCarouselPro
                 preload={i === activeIndex ? 'auto' : 'none'}
                 className="video-carousel__video"
               />
-              {video.caption && i === activeIndex && (
-                <div className="video-carousel__caption">
-                  <span className="video-carousel__caption-text">{video.caption}</span>
-                </div>
-              )}
             </div>
           </div>
         ))}

@@ -3,7 +3,7 @@ export const INDEX_EYEBROW = 'CAPABILITIES';
 export const INDEX_HEADING = 'CAPABILITIES';
 
 export const INDEX_SUPPORTING =
-  'Every discipline your product needs, working together as one team. Industrial design, mechanical engineering, electrical engineering, prototyping, tooling and manufacturing \u2014 all under one roof. No handoffs between vendors. No information loss between stages. No surprise costs when the design meets the real world of manufacturing.';
+  'Every discipline your product needs, working together as one team. Industrial design, mechanical engineering, electrical engineering, software development, AI integration, prototyping, sourcing and manufacturing — all under one roof. No handoffs between vendors. No information loss between stages. No surprise costs when the design meets the real world of manufacturing.';
 
 export const GROUP_LABELS: Record<string, string> = {
   DESIGN: 'DESIGN',

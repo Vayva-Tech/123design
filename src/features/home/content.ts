@@ -3,7 +3,7 @@ export const HERO_EYEBROW = 'PRODUCT DEVELOPMENT \u2022 ENGINEERING \u2022 MANUF
 export const HERO_HEADING_LINES = ['FROM IDEA', 'TO PRODUCTION.'];
 
 export const HERO_SUBTITLE =
-  'We are the team behind products you already use. 123.design takes physical products from napkin sketch through full-rate manufacturing \u2014 industrial design, mechanical and electrical engineering, prototyping, tooling and production management, all working as a single integrated team.';
+  'We are the team behind products you already use. 123.design takes ideas from napkin sketch through full-rate production — industrial design, mechanical and electrical engineering, software and app development, AI integration, prototyping, sourcing and manufacturing management, all working as a single integrated team.';
 
 export const HERO_PRIMARY_CTA = { label: 'Start Your Project \u2192', href: '/start-project' };
 export const HERO_SECONDARY_CTA = { label: 'Explore Our Work \u25b7', href: '/work' };
@@ -116,9 +116,13 @@ export const CAPABILITIES_EYEBROW = 'OUR CAPABILITIES';
 export const CAPABILITIES_HEADING_LINES = ['A FULL-SERVICE', 'DEVELOPMENT PARTNER.'];
 
 export const CAPABILITIES_DESCRIPTION =
-  'Most companies hiring a product development firm end up managing five separate vendors \u2014 a design studio, an ME firm, an EE firm, a prototyping shop and a manufacturing consultant. We do all of it under one roof, which means your product gets designed with manufacturing in mind from day one, not value-engineered after the fact.';
+  'Most companies end up managing five separate vendors — a design studio, an engineering firm, a software agency, a prototyping shop and a manufacturing consultant. We do all of it under one roof. Your product gets designed with manufacturing in mind from day one, your software integrates tightly with your hardware, and your AI features are built into the product architecture — not bolted on after the fact.';
 
 export const CAPABILITY_GROUPS = [
+  {
+    slug: 'product-development',
+    label: 'Product Development',
+  },
   {
     slug: 'industrial-design',
     label: 'Industrial Design',
@@ -132,16 +136,24 @@ export const CAPABILITY_GROUPS = [
     label: 'Electrical Engineering',
   },
   {
+    slug: 'software-development',
+    label: 'Software & App Development',
+  },
+  {
+    slug: 'ai-services',
+    label: 'AI & Machine Learning',
+  },
+  {
     slug: 'prototyping',
     label: 'Prototyping',
   },
   {
-    slug: 'tooling-manufacturing',
-    label: 'Tooling & Manufacturing',
+    slug: 'sourcing',
+    label: 'Sourcing & Supply Chain',
   },
   {
-    slug: 'testing-validation',
-    label: 'Testing & Certification',
+    slug: 'manufacturing',
+    label: 'Manufacturing',
   },
 ] as const;
 

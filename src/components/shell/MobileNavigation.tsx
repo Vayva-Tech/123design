@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { primaryNavigation, startProjectLink, mobileUtilityLinks } from '@/lib/navigation';
-import { SearchButton } from '@/features/search';
 
 function isActiveRoute(pathname: string, href: string): boolean {
   if (href === '/') return pathname === '/';
@@ -107,7 +106,6 @@ export function MobileNavigation() {
             />
           </Link>
           <div className="mobile-nav-header__actions">
-            <SearchButton />
             <button
               type="button"
               className="mobile-nav-close"

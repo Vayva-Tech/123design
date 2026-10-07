@@ -102,10 +102,46 @@ export const CANONICAL_CAPABILITIES: readonly StaticCapabilityDefinition[] = [
     relatedCapabilitySlugs: ['mechanical-engineering', 'product-development', 'testing-validation'],
   },
   {
+    slug: 'software-development',
+    title: 'Software & App Development',
+    group: 'ENGINEERING',
+    order: 6,
+    shortDescription:
+      'Your product does not stop at the hardware edge. We build the companion software — mobile apps, web platforms, embedded interfaces, cloud backends — that makes your product complete. We develop custom applications for clients across consumer, industrial and enterprise markets, integrating tightly with the physical product and the business systems behind it.',
+    deliverables: [
+      'Mobile applications (iOS and Android) with native or cross-platform frameworks',
+      'Web applications and dashboards for product management and analytics',
+      'Cloud backend services, APIs and data pipelines',
+      'Embedded UI and firmware integration with hardware systems',
+      'IoT connectivity, OTA update systems and device management platforms',
+      'AI and machine learning integration for smart product features',
+    ],
+    lifecycleStages: ['EVT', 'DVT', 'PVT', 'PRODUCTION'],
+    relatedCapabilitySlugs: ['electrical-engineering', 'product-development', 'ai-services'],
+  },
+  {
+    slug: 'ai-services',
+    title: 'AI & Machine Learning',
+    group: 'ENGINEERING',
+    order: 7,
+    shortDescription:
+      'We embed intelligence into products and workflows. From on-device inference for edge hardware to cloud-based ML pipelines for analytics and automation, we build AI systems that ship. Computer vision for quality inspection. Predictive models for maintenance. Natural language interfaces for user interaction. We find where AI creates real value — not just demo-worthy features — and build production-grade systems around it.',
+    deliverables: [
+      'Machine learning model development, training and optimization',
+      'Computer vision systems for inspection, detection and classification',
+      'On-device / edge AI deployment with hardware acceleration',
+      'Natural language processing and conversational interfaces',
+      'Predictive analytics and recommendation systems',
+      'AI-powered automation for business workflows and data pipelines',
+    ],
+    lifecycleStages: ['EVT', 'DVT', 'PVT', 'PRODUCTION'],
+    relatedCapabilitySlugs: ['software-development', 'electrical-engineering', 'product-development'],
+  },
+  {
     slug: 'testing-validation',
     title: 'Testing & Validation',
     group: 'ENGINEERING',
-    order: 6,
+    order: 8,
     shortDescription:
       'Shipping an untested product is shipping a liability. We build test plans that mirror how your customers will actually use — and abuse — the product. Functional testing, environmental stress screening, reliability run-to-failure, drop testing, IP rating validation. We find the failures in our lab so your customers do not find them in the field.',
     deliverables: [
@@ -123,7 +159,7 @@ export const CANONICAL_CAPABILITIES: readonly StaticCapabilityDefinition[] = [
     slug: 'prototyping',
     title: 'Prototyping',
     group: 'BUILD',
-    order: 7,
+    order: 9,
     shortDescription:
       'We turn CAD into physical parts within days, not weeks. FDM for fit checks overnight. SLA/SLS for detailed appearance models. RTV casting for small batches of 10–50 units. Sheet metal and carbon fiber for structural prototypes that mirror production intent. Every prototype is a decision-making tool — we build the right process for the right question at the right time.',
     deliverables: [
@@ -141,7 +177,7 @@ export const CANONICAL_CAPABILITIES: readonly StaticCapabilityDefinition[] = [
     slug: 'tooling',
     title: 'Tooling',
     group: 'BUILD',
-    order: 8,
+    order: 10,
     shortDescription:
       'The mold is the most expensive single component of your product program — get it wrong and you are paying $50K+ for a paperweight. We specify molds with the right steel, the right cavity count, and the right gate design for your volume and budget. We manage the tool build at the supplier, run T1–T4 trials, and do not approve a mold until the parts meet dimension, cosmetic and assembly requirements.',
     deliverables: [
@@ -155,10 +191,28 @@ export const CANONICAL_CAPABILITIES: readonly StaticCapabilityDefinition[] = [
     relatedCapabilitySlugs: ['manufacturing', 'mechanical-engineering'],
   },
   {
+    slug: 'sourcing',
+    title: 'Sourcing & Supply Chain',
+    group: 'BUILD',
+    order: 11,
+    shortDescription:
+      'Getting the right parts at the right price from the right suppliers is a full-time job. We manage component sourcing, supplier qualification, pricing negotiation and supply chain strategy so you do not have to. We have established relationships with component distributors, contract manufacturers and specialty suppliers across North America, Europe and Asia. We find the right source for your volume, quality and cost requirements — and we manage the relationship so you do not have to.',
+    deliverables: [
+      'Component sourcing and supplier identification across global markets',
+      'Supplier qualification, auditing and pricing negotiation',
+      'Supply chain strategy with dual-source and risk mitigation planning',
+      'Cost optimization through competitive bidding and value engineering',
+      'Logistics coordination, import/export compliance and freight management',
+      'Ongoing supplier relationship management and quality monitoring',
+    ],
+    lifecycleStages: ['EVT', 'DVT', 'PVT', 'PRODUCTION'],
+    relatedCapabilitySlugs: ['manufacturing', 'tooling', 'program-management'],
+  },
+  {
     slug: 'manufacturing',
     title: 'Manufacturing',
     group: 'BUILD',
-    order: 9,
+    order: 12,
     shortDescription:
       'We do not own factories — we own the process. We source production partners, negotiate pricing, oversee tooling, run production trials, manage quality control, and handle logistics. You get a product that ships on time, at the right cost, with consistent quality. We have managed production runs from 500 units to 500,000 units across plastics, metals, electronics and mixed-assembly products.',
     intro:
@@ -224,7 +278,7 @@ export const CANONICAL_CAPABILITIES: readonly StaticCapabilityDefinition[] = [
     slug: 'program-management',
     title: 'Program Management',
     group: 'MANAGE',
-    order: 10,
+    order: 13,
     shortDescription:
       'A product development program has dozens of parallel workstreams, hundreds of decisions, and a timeline that slips if any one of them stalls. Our program managers keep everything moving — tracking every deliverable, flagging risks before they become problems, and making sure the right people have the right information at the right time. You always know exactly where your project stands.',
     deliverables: [

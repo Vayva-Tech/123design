@@ -110,6 +110,22 @@ html[data-header-scrolled='true'] .site-header[data-header-overlay] {
   display: block;
 }
 
+.brand-mark__logo--dark {
+  display: none;
+}
+
+.brand-mark__logo--light {
+  display: block;
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) .brand-mark__logo--light {
+  display: none;
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) .brand-mark__logo--dark {
+  display: block;
+}
+
 /* --------------------------------------------------------------------------
    DESKTOP NAVIGATION
    Visible at >= 1024px. Hidden below.

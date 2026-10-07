@@ -6,7 +6,6 @@ import { getOrganizationSchema, getWebSiteSchema } from '@/components/seo/schema
 import { ConsentProvider, CookieConsentBanner } from '@/components/consent';
 import { AnalyticsScript } from '@/components/analytics/AnalyticsScript';
 import { ChatWidget } from '@/components/chat/ChatWidget';
-import { SearchDialog } from '@/features/search';
 import { PwaRegistrar } from '@/components/pwa/PwaRegistrar';
 import './globals.css';
 
@@ -86,7 +85,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <SiteFooter />
           <CookieConsentBanner />
-          <SearchDialog />
           <PwaRegistrar />
           {process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID && (
             <ChatWidget websiteId={process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID} />

@@ -23,11 +23,6 @@ export function HomeHeroReel() {
           >
             <source src={entry.videoUrl} type="video/mp4" />
           </video>
-          {entry.caption && (
-            <div className="home-hero__caption">
-              <span className="home-hero__caption-text">{entry.caption}</span>
-            </div>
-          )}
         </div>
       )}
       {!entry.videoUrl && (
@@ -37,11 +32,6 @@ export function HomeHeroReel() {
             alt={entry.decorative ? '' : entry.alt}
             className="home-hero__poster"
           />
-          {entry.caption && (
-            <div className="home-hero__caption">
-              <span className="home-hero__caption-text">{entry.caption}</span>
-            </div>
-          )}
         </div>
       )}
     </>

@@ -10,14 +10,14 @@ import { getBreadcrumbSchema } from '@/components/seo/schemas';
 import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Start a Project',
+  title: 'Start a Project — Product Development, Engineering & Manufacturing',
   description:
-    'Ready to bring your product idea to life? Tell us about your project and our team will respond within one business day.',
+    'From concept to production. Industrial design, mechanical engineering, electrical engineering, prototyping, manufacturing, AI solutions and software development. Tell us about your project.',
   alternates: { canonical: '/start-project' },
   openGraph: {
     title: 'Start a Project with 123.design',
     description:
-      'From concept to production. Tell us about your product idea and get a detailed proposal within one week.',
+      'Full-service product development. Hardware, software, AI, manufacturing. One team from napkin sketch to mass production.',
   },
 };
 
@@ -32,42 +32,49 @@ export default async function StartProjectPage() {
 
   const defaultSettings = {
     productTypes: [
-      'Web Application',
-      'Mobile App',
-      'E-commerce Platform',
-      'SaaS Product',
-      'API / Backend',
+      'Physical Product (Consumer, Medical, Industrial)',
+      'Electronic Device / IoT',
+      'Software / Mobile Application',
+      'AI / Machine Learning Solution',
+      'Prototyping & Rapid Iteration',
+      'Manufacturing & Sourcing',
       'Other',
     ],
     developmentStages: [
-      'Just an idea',
-      'Have a prototype',
-      'MVP in development',
+      'Just an idea / Napkin sketch',
+      'Concept exploration needed',
+      'Have a prototype / proof of concept',
+      'Engineering validation in progress',
       'Existing product needs improvement',
+      'Ready for manufacturing',
     ],
     needs: [
-      'Product Strategy',
-      'UX/UI Design',
-      'Frontend Development',
-      'Backend Development',
-      'Mobile Development',
-      'Full-Stack Development',
-      'Technical Architecture',
-      'Performance Optimization',
+      'Product Strategy & Research',
+      'Industrial Design',
+      'Mechanical Engineering',
+      'Electrical Engineering',
+      'Embedded Firmware',
+      'Prototyping & Testing',
+      'Software / App Development',
+      'AI / Machine Learning',
+      'Design for Manufacturing (DFM)',
+      'Tooling & Injection Molding',
+      'Supply Chain & Sourcing',
+      'Quality & Certification',
     ],
     timingOptions: [
       'ASAP',
       'Within 1 month',
       '1-3 months',
       '3-6 months',
-      'Just exploring',
+      'Just exploring options',
     ],
     budgetOptions: [
-      'Under $10k',
-      '$10k - $25k',
+      'Under $25k',
       '$25k - $50k',
       '$50k - $100k',
-      '$100k+',
+      '$100k - $250k',
+      '$250k+',
     ],
     budgetEnabled: true,
     confirmationHeading: 'Thank you!',
@@ -97,13 +104,15 @@ export default async function StartProjectPage() {
 
       <section className="start-project-hero" aria-label="Start your project">
         <Container variant="content" className="start-project-hero__content">
-          <Eyebrow marker>LET&apos;S BUILD TOGETHER</Eyebrow>
+          <Eyebrow marker>PRODUCT DEVELOPMENT &bull; ENGINEERING &bull; MANUFACTURING</Eyebrow>
           <Heading variant="displayXL" className="start-project-hero__heading">
             Start a Project
           </Heading>
           <Text variant="lead" className="start-project-hero__supporting">
-            From concept to production, we guide products through every phase of development.
-            Tell us about your vision and our team will reach out within one business day.
+            From napkin sketch to mass production. We handle the full stack: industrial design,
+            mechanical and electrical engineering, prototyping, software and AI development,
+            manufacturing oversight and supply chain management. One integrated team, zero gaps
+            between stages.
           </Text>
         </Container>
       </section>

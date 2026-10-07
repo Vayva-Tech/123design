@@ -1,5 +1,5 @@
-# Large media files - host on CDN instead
-public/media/
+# All video files - too large for Vercel deployment (~367MB)
+**/*.mp4
 
 # Development files
 .git

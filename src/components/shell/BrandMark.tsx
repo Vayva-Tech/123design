@@ -9,7 +9,15 @@ export function BrandMark() {
         alt="123 Design"
         width={120}
         height={120}
-        className="brand-mark__logo"
+        className="brand-mark__logo brand-mark__logo--light"
+        priority
+      />
+      <Image
+        src="/logo-light.svg"
+        alt="123 Design"
+        width={120}
+        height={120}
+        className="brand-mark__logo brand-mark__logo--dark"
         priority
       />
     </Link>

@@ -66,7 +66,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000959',
     width: 2492,
     height: 1080,
-    caption: 'Version 2 Prototype — Oral Care System',
   },
   {
     id: 'reel-28a',
@@ -77,7 +76,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000960',
     width: 2492,
     height: 1080,
-    caption: 'Version 2 Prototype — Fitness Equipment',
   },
   {
     id: 'reel-29',
@@ -88,7 +86,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000961',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Bath Accessories',
   },
   {
     id: 'reel-30',
@@ -99,7 +96,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000963',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Smart Kitchen',
   },
   {
     id: 'reel-31',
@@ -110,7 +106,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000964',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Medical Device',
   },
   {
     id: 'reel-32',
@@ -121,7 +116,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000965',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Tactical Equipment',
   },
   {
     id: 'reel-33',
@@ -132,7 +126,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000966',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Audio System',
   },
   {
     id: 'reel-34',
@@ -143,7 +136,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000967',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Defense Technology',
   },
   {
     id: 'reel-35',
@@ -154,7 +146,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000968',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Tactical Gear',
   },
   {
     id: 'reel-36',
@@ -165,7 +156,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000969',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Portable Electronics',
   },
   {
     id: 'reel-37',
@@ -176,7 +166,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000970',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Defense System',
   },
   {
     id: 'reel-38',
@@ -187,7 +176,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000971',
     width: 1936,
     height: 1080,
-    caption: 'Version 2 Prototype — Home Appliance',
   },
   {
     id: 'reel-42',
@@ -198,7 +186,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000976',
     width: 2592,
     height: 1080,
-    caption: 'Version 2 Prototype — Security System',
   },
   {
     id: 'reel-42A',
@@ -209,7 +196,6 @@ export const heroReelPrimary: HeroReelEntry[] = [
     sourceAssetId: 'AST-000977',
     width: 2592,
     height: 1080,
-    caption: 'Version 2 Prototype — Industrial Equipment',
   },
 ];
 
@@ -825,6 +811,18 @@ export const processStages: LaunchMediaEntry[] = [
  */
 export const capabilityTiles: LaunchMediaEntry[] = [
   {
+    id: 'capability-product-development',
+    publicUrl: '/media/launch/projects/123_design_blog_new_products_1 (1).jpg',
+    sourceAssetId: 'AST-000890',
+    usage: 'CAPABILITY_TILE',
+    alt: 'Product Development — from concept to production',
+    decorative: false,
+    width: 1600,
+    height: 900,
+    entityMapping: 'PRJ-LOCAL-0020',
+    publicationStatus: 'USE_AFTER_CONTENT_APPROVAL',
+  },
+  {
     id: 'capability-industrial-design',
     publicUrl: '/media/launch/projects/81134d30-b341-4e59-bc7f-054f37c7c88b.jpg',
     sourceAssetId: 'AST-000887',
@@ -861,6 +859,30 @@ export const capabilityTiles: LaunchMediaEntry[] = [
     publicationStatus: 'USE_AFTER_CONTENT_APPROVAL',
   },
   {
+    id: 'capability-software-development',
+    publicUrl: '/images/capabilities/software-development.png',
+    sourceAssetId: 'AST-000891',
+    usage: 'CAPABILITY_TILE',
+    alt: 'Software & App Development — mobile and web applications',
+    decorative: false,
+    width: 1792,
+    height: 1024,
+    entityMapping: 'PRJ-LOCAL-0023',
+    publicationStatus: 'USE_AFTER_CONTENT_APPROVAL',
+  },
+  {
+    id: 'capability-ai-services',
+    publicUrl: '/images/capabilities/ai-services.png',
+    sourceAssetId: 'AST-000892',
+    usage: 'CAPABILITY_TILE',
+    alt: 'AI & Machine Learning — intelligent systems and automation',
+    decorative: false,
+    width: 1792,
+    height: 1024,
+    entityMapping: 'PRJ-LOCAL-0024',
+    publicationStatus: 'USE_AFTER_CONTENT_APPROVAL',
+  },
+  {
     id: 'capability-prototyping',
     publicUrl: '/images/capabilities/prototyping.png',
     sourceAssetId: 'AST-000865',
@@ -873,23 +895,23 @@ export const capabilityTiles: LaunchMediaEntry[] = [
     publicationStatus: 'USE_AFTER_CONTENT_APPROVAL',
   },
   {
-    id: 'capability-tooling',
-    publicUrl: '/images/capabilities/manufacturing.png',
-    sourceAssetId: 'AST-000883',
+    id: 'capability-sourcing',
+    publicUrl: '/images/capabilities/sourcing.png',
+    sourceAssetId: 'AST-000893',
     usage: 'CAPABILITY_TILE',
-    alt: 'Tooling & Manufacturing — CNC machines and injection molding',
+    alt: 'Sourcing & Supply Chain — global supplier network',
     decorative: false,
     width: 1792,
     height: 1024,
-    entityMapping: 'PRJ-LOCAL-0022',
+    entityMapping: 'PRJ-LOCAL-0025',
     publicationStatus: 'USE_AFTER_CONTENT_APPROVAL',
   },
   {
-    id: 'capability-testing',
-    publicUrl: '/images/capabilities/testing.png',
-    sourceAssetId: 'AST-000884',
+    id: 'capability-manufacturing',
+    publicUrl: '/images/capabilities/manufacturing.png',
+    sourceAssetId: 'AST-000883',
     usage: 'CAPABILITY_TILE',
-    alt: 'Testing & Validation — precision measurement and quality control',
+    alt: 'Manufacturing — CNC machines and injection molding',
     decorative: false,
     width: 1792,
     height: 1024,
