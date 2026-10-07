@@ -1,0 +1,440 @@
+/* ==========================================================================
+   work.css — Work Index Page Styles
+   123.design — BUILD 007
+   Hero, filter bar, project grid, mobile filter sheet, hover preview.
+   All styling via CSS classes + data attributes. Zero inline styles.
+   Typography handled by Heading/Text components (type classes).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   WORK HERO
+   Editorial intro with eyebrow, heading, supporting text.
+   -------------------------------------------------------------------------- */
+
+.work-hero {
+  padding-block: var(--space-80) var(--space-48);
+}
+
+.work-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  max-width: var(--container-reading);
+}
+
+.work-hero__heading {
+  max-width: 20ch;
+}
+
+.work-hero__supporting {
+  max-width: 52ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   FILTER BAR
+   Horizontal bar with desktop selects + mobile trigger + result count.
+   -------------------------------------------------------------------------- */
+
+.work-filter-bar {
+  padding-block: var(--space-28);
+  border-block-start: 1px solid var(--color-line);
+  border-block-end: 1px solid var(--color-line);
+  background-color: var(--color-canvas-subtle);
+  background-image: linear-gradient(to bottom, rgba(17, 17, 15, 0.02), transparent);
+}
+
+.work-filter-bar__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-24);
+}
+
+.work-filter-bar__count {
+  margin-top: 0;
+  color: var(--color-ink-muted);
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+  font-weight: 500;
+  white-space: nowrap;
+  padding-bottom: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   DESKTOP FILTERS (visible >= 768px)
+   Native <select> controls inline.
+   -------------------------------------------------------------------------- */
+
+.work-filters {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-16);
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .work-filters {
+    display: flex;
+  }
+
+  .work-filter-bar__count {
+    display: none;
+  }
+}
+
+.work-filters__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-20);
+  flex: 1;
+}
+
+.work-filters__count {
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+}
+
+.work-filters__clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: clamp(0.75rem, 0.82vw, 0.8125rem);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: var(--space-10) 0;
+  transition: color var(--duration-micro) var(--ease-primary);
+}
+
+.work-filters__clear:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   FILTER FIELD (shared between desktop + mobile)
+   Label + native <select>.
+   -------------------------------------------------------------------------- */
+
+.work-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.work-filter-field__label {
+  font-size: clamp(0.6875rem, 0.75vw, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-secondary);
+}
+
+.work-filter-field__select {
+  appearance: none;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--space-10) var(--space-40) var(--space-10) var(--space-14);
+  font-family: inherit;
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+  font-weight: 500;
+  color: var(--color-ink);
+  cursor: pointer;
+  min-width: 180px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='M3.5 5.25L7 8.75L10.5 5.25' stroke='%2311110F' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  transition: all var(--duration-micro) var(--ease-primary);
+  box-shadow: 0 1px 3px rgba(17, 17, 15, 0.06);
+}
+
+.work-filter-field__select:hover {
+  border-color: var(--color-ink);
+  box-shadow: 0 2px 6px rgba(17, 17, 15, 0.1);
+}
+
+.work-filter-field__select:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+  border-color: var(--color-accent);
+}
+
+.work-filter-field__select:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+  border-color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE FILTER TRIGGER (visible < 768px)
+   -------------------------------------------------------------------------- */
+
+.work-mobile-filter-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background: none;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-8) var(--space-16);
+  font-family: inherit;
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+  color: var(--color-ink);
+  cursor: pointer;
+  min-height: 44px;
+  transition: border-color var(--duration-micro) var(--ease-primary);
+}
+
+.work-mobile-filter-trigger:hover {
+  border-color: var(--color-line-strong);
+}
+
+.work-mobile-filter-trigger:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+}
+
+@media (min-width: 768px) {
+  .work-mobile-filter-trigger {
+    display: none;
+  }
+}
+
+.work-mobile-filter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-round);
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE FILTER SHEET (dialog)
+   Bottom sheet with draft state, apply/clear actions.
+   -------------------------------------------------------------------------- */
+
+.work-filter-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 85svh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid var(--color-line);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background-color: var(--color-canvas);
+  box-shadow: var(--shadow-modal);
+  z-index: var(--z-modal);
+  width: 100%;
+  overflow: hidden;
+}
+
+.work-filter-sheet::backdrop {
+  background-color: rgba(17, 17, 15, 0.4);
+}
+
+.work-filter-sheet__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) var(--space-20);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.work-filter-sheet__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+  color: var(--color-ink-secondary);
+  padding: var(--space-4) var(--space-8);
+  transition: color var(--duration-micro) var(--ease-primary);
+}
+
+.work-filter-sheet__close:hover {
+  color: var(--color-ink);
+}
+
+.work-filter-sheet__close:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+}
+
+.work-filter-sheet__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  padding: var(--space-20);
+  overflow-y: auto;
+  max-height: calc(85svh - 140px);
+}
+
+.work-filter-sheet__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) var(--space-20);
+  border-top: 1px solid var(--color-line);
+}
+
+.work-filter-sheet__result-count {
+  color: var(--color-ink-muted);
+  font-size: clamp(0.75rem, 0.82vw, 0.8125rem);
+}
+
+.work-filter-sheet__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.work-filter-sheet__clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+  color: var(--color-ink-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  padding: var(--space-4) 0;
+  transition: color var(--duration-micro) var(--ease-primary);
+}
+
+.work-filter-sheet__clear:hover {
+  color: var(--color-ink);
+}
+
+.work-filter-sheet__clear:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+}
+
+/* --------------------------------------------------------------------------
+   PROJECT GRID
+   3-col desktop, 2-col tablet, 1-col mobile.
+   -------------------------------------------------------------------------- */
+
+.work-grid-section {
+  padding-block: var(--space-48);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-grid-empty {
+  padding-block: var(--space-48);
+  text-align: center;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   PROJECT CARD HOVER PREVIEW
+   Video overlay on hover. Only on devices with fine pointer + hover.
+   -------------------------------------------------------------------------- */
+
+.project-card__preview {
+  position: absolute;
+  z-index: var(--z-raised);
+  pointer-events: none;
+}
+
+.project-card__preview-video {
+  display: none;
+  width: 320px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-modal);
+}
+
+.project-card__preview-video[data-visible='true'] {
+  display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card__preview {
+    top: var(--space-12);
+    right: calc(-320px - var(--space-16));
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (max-width: 1279px) {
+  .project-card__preview {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card__preview-video {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — HERO
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .work-hero {
+    padding-block: var(--space-64) var(--space-40);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   WORK SHOWCASE — Video showcase section
+   -------------------------------------------------------------------------- */
+
+.work-showcase {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-canvas);
+}
+
+.work-showcase__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-bottom: var(--space-32);
+}
+
+.work-showcase__video {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+}

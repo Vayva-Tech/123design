@@ -1,0 +1,459 @@
+/* ==========================================================================
+   capabilities.css — Capabilities Index + Detail Page Styles
+   123.design — BUILD 009
+   Index hero, group sections, capability cards, detail hero, lifecycle,
+   deliverables, methods, body, support media, related, CTA.
+   All styling via CSS classes + data attributes. Zero inline styles.
+   Typography handled by Heading/Text components (type classes).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   INDEX HERO
+   Editorial intro with eyebrow, heading, supporting text.
+   -------------------------------------------------------------------------- */
+
+.capabilities-hero {
+  padding-block: var(--space-80) var(--space-48);
+}
+
+.capabilities-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  max-width: var(--container-reading);
+}
+
+.capabilities-hero__heading {
+  max-width: 20ch;
+}
+
+.capabilities-hero__supporting {
+  max-width: 52ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY GROUP SECTION
+   Group heading + grid of capability cards.
+   -------------------------------------------------------------------------- */
+
+.capability-group {
+  padding-block: var(--space-40);
+  border-block-start: 1px solid var(--color-line);
+}
+
+.capability-group__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+  margin-block-start: var(--space-32);
+}
+
+@media (min-width: 768px) {
+  .capability-group__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .capability-group__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY CARD
+   Link card with title, description, lifecycle stage tags.
+   -------------------------------------------------------------------------- */
+
+.capability-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color var(--duration-micro) var(--ease-primary),
+    background-color var(--duration-micro) var(--ease-primary);
+}
+
+.capability-card:hover {
+  border-color: var(--color-line-strong);
+  background-color: var(--color-surface);
+}
+
+.capability-card:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+}
+
+.capability-card__title {
+  display: block;
+}
+
+.capability-card__description {
+  display: block;
+  color: var(--color-ink-secondary);
+}
+
+.capability-card__stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-block-start: var(--space-4);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY HERO (Detail)
+   Full-width media with overlaid content at bottom.
+   -------------------------------------------------------------------------- */
+
+.capability-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.capability-hero__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-surface-muted);
+}
+
+@media (min-width: 768px) {
+  .capability-hero__media {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+.capability-hero__media .responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.capability-hero__media .video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.capability-hero__content {
+  position: relative;
+  padding-block: var(--space-40) var(--space-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .capability-hero__content {
+    padding-block: var(--space-48) var(--space-64);
+  }
+}
+
+.capability-hero__title {
+  max-width: 18ch;
+}
+
+.capability-hero__summary {
+  max-width: 52ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY LIFECYCLE
+   Stage tags row.
+   -------------------------------------------------------------------------- */
+
+.capability-lifecycle {
+  padding-block: var(--space-24);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.capability-lifecycle__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-block-start: var(--space-16);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY DELIVERABLES
+   Bulleted list of deliverable items.
+   -------------------------------------------------------------------------- */
+
+.capability-deliverables {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.capability-deliverables__heading {
+  max-width: 20ch;
+}
+
+.capability-deliverables__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-block-start: var(--space-24);
+  padding: 0;
+  list-style: none;
+}
+
+.capability-deliverables__item {
+  position: relative;
+  padding-inline-start: var(--space-20);
+  font-size: clamp(0.9375rem, 1vw, 1.0625rem);
+  color: var(--color-ink);
+}
+
+.capability-deliverables__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-round);
+  background-color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY METHODS
+   Bulleted list of method items.
+   -------------------------------------------------------------------------- */
+
+.capability-methods {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.capability-methods__heading {
+  max-width: 20ch;
+}
+
+.capability-methods__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-block-start: var(--space-24);
+  padding: 0;
+  list-style: none;
+}
+
+.capability-methods__item {
+  position: relative;
+  padding-inline-start: var(--space-20);
+  font-size: clamp(0.9375rem, 1vw, 1.0625rem);
+  color: var(--color-ink);
+}
+
+.capability-methods__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-round);
+  background-color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY BODY
+   Intro (lead) + body text sections.
+   -------------------------------------------------------------------------- */
+
+.capability-body {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.capability-body__intro {
+  max-width: 60ch;
+  margin-block-end: var(--space-24);
+}
+
+.capability-body__text {
+  max-width: 60ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY SUPPORT MEDIA
+   Image gallery grid.
+   -------------------------------------------------------------------------- */
+
+.capability-support-media {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.capability-support-media__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
+  margin-block-start: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .capability-support-media__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.capability-support-media__item {
+  min-width: 0;
+}
+
+.capability-support-media__item .responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY RELATED CAPABILITIES
+   Links to related capabilities with group labels.
+   -------------------------------------------------------------------------- */
+
+.capability-related {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.capability-related__heading {
+  max-width: 20ch;
+}
+
+.capability-related__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-block-start: var(--space-24);
+  padding: 0;
+  list-style: none;
+}
+
+.capability-related__item {
+  border-top: 1px solid var(--color-line);
+}
+
+.capability-related__item:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.capability-related__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding-block: var(--space-16);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--duration-micro) var(--ease-primary);
+}
+
+.capability-related__link:hover {
+  opacity: 0.7;
+}
+
+.capability-related__link:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--radius-sm);
+}
+
+.capability-related__title {
+  display: block;
+}
+
+.capability-related__group {
+  display: block;
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITY CTA
+   End-of-page call to action.
+   -------------------------------------------------------------------------- */
+
+.capability-cta {
+  padding-block: var(--space-48);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.capability-cta__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.capability-cta__heading {
+  max-width: 20ch;
+}
+
+.capability-cta__text {
+  max-width: 52ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+.capability-cta__actions {
+  margin-block-start: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .capabilities-hero {
+    padding-block: var(--space-64) var(--space-40);
+  }
+
+  .capability-group {
+    padding-block: var(--space-32);
+  }
+
+  .capability-hero__content {
+    padding-block: var(--space-32) var(--space-40);
+  }
+
+  .capability-lifecycle {
+    padding-block: var(--space-20);
+  }
+
+  .capability-deliverables,
+  .capability-methods,
+  .capability-body,
+  .capability-support-media,
+  .capability-related {
+    padding-block: var(--space-40);
+  }
+
+  .capability-cta {
+    padding-block: var(--space-48);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .capability-card,
+  .capability-related__link {
+    transition: none;
+  }
+}

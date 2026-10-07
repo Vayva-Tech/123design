@@ -1,0 +1,419 @@
+/* ==========================================================================
+   industries.css — Industries Index + Detail Page Styles
+   123.design — BUILD 010
+   Index hero, grid, industry cards, detail hero, body, challenges,
+   considerations, related capabilities, related projects, CTA.
+   All styling via CSS classes + data attributes. Zero inline styles.
+   Typography handled by Heading/Text components (type classes).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   INDUSTRIES INDEX HERO
+   Editorial intro with eyebrow, heading, supporting text.
+   -------------------------------------------------------------------------- */
+
+.industries-hero {
+  padding-block: var(--space-80) var(--space-48);
+}
+
+.industries-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  max-width: var(--container-reading);
+}
+
+.industries-hero__heading {
+  max-width: 20ch;
+}
+
+.industries-hero__supporting {
+  max-width: 52ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRIES GRID SECTION
+   Container for the industry card grid.
+   -------------------------------------------------------------------------- */
+
+.industries-grid-section {
+  padding-block: var(--space-40);
+  border-block-start: 1px solid var(--color-line);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY CARD
+   Link card with title and description.
+   -------------------------------------------------------------------------- */
+
+.industry-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color var(--duration-micro) var(--ease-primary),
+    background-color var(--duration-micro) var(--ease-primary);
+}
+
+.industry-card:hover {
+  border-color: var(--color-line-strong);
+  background-color: var(--color-surface);
+}
+
+.industry-card:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+}
+
+.industry-card__title {
+  display: block;
+}
+
+.industry-card__description {
+  display: block;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY HERO (Detail)
+   Full-width media with overlaid content at bottom.
+   -------------------------------------------------------------------------- */
+
+.industry-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.industry-hero__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-surface-muted);
+}
+
+@media (min-width: 768px) {
+  .industry-hero__media {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+.industry-hero__media .responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.industry-hero__content {
+  position: relative;
+  padding-block: var(--space-40) var(--space-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .industry-hero__content {
+    padding-block: var(--space-48) var(--space-64);
+  }
+}
+
+.industry-hero__title {
+  max-width: 18ch;
+}
+
+.industry-hero__summary {
+  max-width: 52ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY BODY
+   Intro (lead) text section.
+   -------------------------------------------------------------------------- */
+
+.industry-body {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.industry-body__intro {
+  max-width: 60ch;
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY CHALLENGES
+   Bulleted list of typical challenges.
+   -------------------------------------------------------------------------- */
+
+.industry-challenges {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.industry-challenges__heading {
+  max-width: 20ch;
+}
+
+.industry-challenges__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-block-start: var(--space-24);
+  padding: 0;
+  list-style: none;
+}
+
+.industry-challenges__item {
+  position: relative;
+  padding-inline-start: var(--space-20);
+  font-size: clamp(0.9375rem, 1vw, 1.0625rem);
+  color: var(--color-ink);
+}
+
+.industry-challenges__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-round);
+  background-color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY CONSIDERATIONS
+   Bulleted list of development considerations.
+   -------------------------------------------------------------------------- */
+
+.industry-considerations {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.industry-considerations__heading {
+  max-width: 20ch;
+}
+
+.industry-considerations__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-block-start: var(--space-24);
+  padding: 0;
+  list-style: none;
+}
+
+.industry-considerations__item {
+  position: relative;
+  padding-inline-start: var(--space-20);
+  font-size: clamp(0.9375rem, 1vw, 1.0625rem);
+  color: var(--color-ink);
+}
+
+.industry-considerations__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-round);
+  background-color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY RELATED CAPABILITIES
+   Links to related capabilities with group labels.
+   -------------------------------------------------------------------------- */
+
+.industry-related-caps {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.industry-related-caps__heading {
+  max-width: 20ch;
+}
+
+.industry-related-caps__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-block-start: var(--space-24);
+  padding: 0;
+  list-style: none;
+}
+
+.industry-related-caps__item {
+  border-top: 1px solid var(--color-line);
+}
+
+.industry-related-caps__item:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.industry-related-caps__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding-block: var(--space-16);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--duration-micro) var(--ease-primary);
+}
+
+.industry-related-caps__link:hover {
+  opacity: 0.7;
+}
+
+.industry-related-caps__link:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--radius-sm);
+}
+
+.industry-related-caps__title {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY RELATED PROJECTS
+   Grid of project cards.
+   -------------------------------------------------------------------------- */
+
+.industry-related-projects {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.industry-related-projects__heading {
+  max-width: 20ch;
+}
+
+.industry-related-projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+  margin-block-start: var(--space-32);
+}
+
+@media (min-width: 768px) {
+  .industry-related-projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .industry-related-projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.industry-related-projects__empty {
+  display: block;
+  margin-block-start: var(--space-24);
+  color: var(--color-ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRY CTA
+   End-of-page call to action.
+   -------------------------------------------------------------------------- */
+
+.industry-cta {
+  padding-block: var(--space-48);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.industry-cta__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.industry-cta__heading {
+  max-width: 20ch;
+}
+
+.industry-cta__text {
+  max-width: 52ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+.industry-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  margin-block-start: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .industries-hero {
+    padding-block: var(--space-64) var(--space-40);
+  }
+
+  .industries-grid-section {
+    padding-block: var(--space-32);
+  }
+
+  .industry-hero__content {
+    padding-block: var(--space-32) var(--space-40);
+  }
+
+  .industry-body,
+  .industry-challenges,
+  .industry-considerations,
+  .industry-related-caps,
+  .industry-related-projects {
+    padding-block: var(--space-40);
+  }
+
+  .industry-cta {
+    padding-block: var(--space-48);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .industry-card,
+  .industry-related-caps__link {
+    transition: none;
+  }
+}

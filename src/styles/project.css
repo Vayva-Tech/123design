@@ -1,0 +1,534 @@
+/* ==========================================================================
+   project.css — Project Detail Page Styles
+   123.design — BUILD 008
+   Hero, meta, narrative, discipline, gallery, video, technical, testimonial,
+   related work, next project, preview indicator, final CTA.
+   All styling via CSS classes + data attributes. Zero inline styles.
+   Typography handled by Heading/Text components (type classes).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PROJECT HERO
+   Full-width media with overlaid content at bottom.
+   -------------------------------------------------------------------------- */
+
+.project-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-hero__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-surface-muted);
+}
+
+@media (min-width: 768px) {
+  .project-hero__media {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+.project-hero__media .responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-hero__media .video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-hero__content {
+  position: relative;
+  padding-block: var(--space-40) var(--space-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .project-hero__content {
+    padding-block: var(--space-48) var(--space-64);
+  }
+}
+
+.project-hero__title {
+  max-width: 18ch;
+}
+
+.project-hero__summary {
+  max-width: 52ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   PROJECT META
+   Definition list of project attributes (client, year, stage, etc.)
+   -------------------------------------------------------------------------- */
+
+.project-meta {
+  padding-block: var(--space-40);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.project-meta__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  margin: 0;
+}
+
+.project-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .project-meta__item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-24);
+  }
+}
+
+.project-meta__label {
+  font-size: clamp(0.6875rem, 0.75vw, 0.75rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.project-meta__value {
+  margin: 0;
+  font-size: clamp(0.9375rem, 1vw, 1.0625rem);
+  color: var(--color-ink);
+}
+
+.project-meta__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   CASE STUDY BODY
+   Wrapper for all case study modules.
+   -------------------------------------------------------------------------- */
+
+.project-case-study {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   NARRATIVE SECTION
+   Overview, challenge, insight, result blocks.
+   -------------------------------------------------------------------------- */
+
+.project-narrative {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.project-narrative__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.project-narrative__heading {
+  max-width: 20ch;
+}
+
+.project-narrative__body {
+  max-width: 60ch;
+}
+
+.project-narrative__media {
+  margin-block: var(--space-16);
+}
+
+.project-narrative__video {
+  width: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   DISCIPLINE SECTION
+   Industrial design, mechanical/electrical engineering, etc.
+   -------------------------------------------------------------------------- */
+
+.project-discipline {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.project-discipline__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.project-discipline__heading {
+  max-width: 20ch;
+}
+
+.project-discipline__body {
+  max-width: 60ch;
+}
+
+.project-discipline__media {
+  margin-block: var(--space-16);
+}
+
+.project-discipline__video {
+  width: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   GALLERY
+   Grid of images/videos in wide container.
+   -------------------------------------------------------------------------- */
+
+.project-gallery {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.project-gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .project-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-gallery__item {
+  min-width: 0;
+}
+
+.project-gallery__video {
+  width: 100%;
+  display: block;
+}
+
+.project-gallery__caption {
+  margin-block-start: var(--space-16);
+  color: var(--color-ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   VIDEO BLOCK
+   Full-width video player in wide container.
+   -------------------------------------------------------------------------- */
+
+.project-video-block {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.project-video-block__transcript {
+  margin-top: var(--space-16);
+  padding: var(--space-16);
+  background-color: var(--color-surface-muted);
+  border-radius: var(--radius-sm);
+}
+
+.project-video-block__transcript-toggle {
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink-secondary);
+  list-style: none;
+}
+
+.project-video-block__transcript-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.project-video-block__transcript-toggle::before {
+  content: '\25B6';
+  display: inline-block;
+  margin-right: var(--space-8);
+  font-size: 0.7em;
+  transition: transform var(--duration-micro) var(--ease-primary);
+}
+
+details[open] > .project-video-block__transcript-toggle::before {
+  transform: rotate(90deg);
+}
+
+.project-video-block__transcript-text {
+  margin-top: var(--space-12);
+  color: var(--color-ink-secondary);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* --------------------------------------------------------------------------
+   TECHNICAL DETAILS
+   Technical specifications with optional media.
+   -------------------------------------------------------------------------- */
+
+.project-technical {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.project-technical__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.project-technical__heading {
+  max-width: 20ch;
+}
+
+.project-technical__details {
+  max-width: 60ch;
+}
+
+.project-technical__media {
+  margin-block: var(--space-16);
+}
+
+.project-technical__video {
+  width: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   TESTIMONIAL BLOCK
+   Blockquote with attribution.
+   -------------------------------------------------------------------------- */
+
+.project-testimonial {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.project-testimonial__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  margin: 0;
+}
+
+.project-testimonial__quote {
+  max-width: 48ch;
+}
+
+.project-testimonial__attribution {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.project-testimonial__name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(0.9375rem, 1vw, 1.0625rem);
+  color: var(--color-ink);
+}
+
+.project-testimonial__role {
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+  color: var(--color-ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   RELATED WORK
+   Grid of project cards.
+   -------------------------------------------------------------------------- */
+
+.related-work {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.related-work__heading {
+  margin-block-end: var(--space-32);
+}
+
+.related-work__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+}
+
+@media (min-width: 768px) {
+  .related-work__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .related-work__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   NEXT PROJECT
+   Large link to the next project.
+   -------------------------------------------------------------------------- */
+
+.next-project {
+  padding-block: var(--space-48);
+  border-block-end: 1px solid var(--color-line);
+}
+
+.next-project__link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--duration-micro) var(--ease-primary);
+}
+
+.next-project__link:hover {
+  opacity: 0.7;
+}
+
+.next-project__link:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--radius-sm);
+}
+
+.next-project__title {
+  max-width: 20ch;
+}
+
+/* --------------------------------------------------------------------------
+   PREVIEW INDICATOR
+   Fixed badge shown in preview/draft mode.
+   -------------------------------------------------------------------------- */
+
+.preview-indicator {
+  position: fixed;
+  top: var(--space-16);
+  right: var(--space-16);
+  z-index: var(--z-sticky);
+}
+
+.preview-indicator__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-12);
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  font-size: clamp(0.6875rem, 0.75vw, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   PROJECT FINAL CTA
+   End-of-page call to action.
+   -------------------------------------------------------------------------- */
+
+.project-cta {
+  padding-block: var(--space-48);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.project-cta__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.project-cta__heading {
+  max-width: 20ch;
+}
+
+.project-cta__text {
+  max-width: 52ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+.project-cta__actions {
+  margin-block-start: var(--space-8);
+}
+
+.project-cta .btn[data-variant='secondary'] {
+  border-color: var(--color-dark-line);
+  color: var(--color-dark-ink);
+}
+
+.project-cta .btn[data-variant='secondary']:hover {
+  border-color: var(--color-dark-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .project-hero__content {
+    padding-block: var(--space-32) var(--space-40);
+  }
+
+  .project-meta {
+    padding-block: var(--space-32);
+  }
+
+  .project-narrative,
+  .project-discipline,
+  .project-gallery,
+  .project-video-block,
+  .project-technical {
+    padding-block: var(--space-40);
+  }
+
+  .project-testimonial {
+    padding-block: var(--space-48);
+  }
+
+  .related-work,
+  .next-project {
+    padding-block: var(--space-48);
+  }
+
+  .project-cta {
+    padding-block: var(--space-48);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .next-project__link {
+    transition: none;
+  }
+}

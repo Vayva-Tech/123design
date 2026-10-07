@@ -1,0 +1,106 @@
+/* ==========================================================================
+   typography.css — Fluid Type Scale
+   123.design Design System — Phase 2
+   All sizes use clamp() for fluid scaling between mobile and desktop.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DISPLAY SCALE — Inter Tight (heading font)
+   -------------------------------------------------------------------------- */
+
+.type-display-xl {
+  font-size: clamp(5rem, 7.4vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.type-display-l {
+  font-size: clamp(4rem, 5.5vw, 5.5rem);
+  line-height: 0.97;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   HEADING SCALE — Inter Tight
+   -------------------------------------------------------------------------- */
+
+.type-h1 {
+  font-size: clamp(3.5rem, 4.5vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.type-h2 {
+  font-size: clamp(2.75rem, 3.8vw, 3.75rem);
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.type-h3 {
+  font-size: clamp(2rem, 2.7vw, 2.625rem);
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.type-h4 {
+  font-size: clamp(1.5rem, 1.9vw, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   BODY SCALE — Inter (body font)
+   -------------------------------------------------------------------------- */
+
+.type-lead {
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+}
+
+.type-body-lg {
+  font-size: clamp(1.125rem, 1.2vw, 1.25rem);
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.type-body {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.57;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.type-small {
+  font-size: clamp(0.875rem, 0.94vw, 0.9375rem);
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+}
+
+.type-micro {
+  font-size: clamp(0.75rem, 0.82vw, 0.8125rem);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}

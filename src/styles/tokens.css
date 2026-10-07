@@ -1,0 +1,148 @@
+/* ==========================================================================
+   tokens.css — Canonical Phase 2 Design Tokens
+   123.design Design System Foundation
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------------------------------
+     COLOR TOKENS — Light Foundation
+     -------------------------------------------------------------------------- */
+  --color-canvas: #f4f1ea;
+  --color-canvas-subtle: #f8f6f1;
+  --color-surface: #ffffff;
+  --color-surface-muted: #ece9e2;
+  --color-ink: #11110f;
+  --color-ink-secondary: #4e504b;
+  --color-ink-muted: #777970;
+  --color-line: #d6d3cb;
+  --color-line-strong: #a9a69d;
+
+  /* --------------------------------------------------------------------------
+     COLOR TOKENS — Dark Foundation
+     -------------------------------------------------------------------------- */
+  --color-dark-canvas: #11110f;
+  --color-dark-surface: #191a17;
+  --color-dark-surface-elevated: #22231f;
+  --color-dark-ink: #f5f2ea;
+  --color-dark-ink-secondary: #b7b6af;
+  --color-dark-line: #363732;
+
+  /* --------------------------------------------------------------------------
+     COLOR TOKENS — Accent
+     -------------------------------------------------------------------------- */
+  --color-accent: #f05a36;
+  --color-accent-hover: #d94a29;
+  --color-accent-soft: #f8d9cf;
+  --color-accent-dark-context: #ff7554;
+
+  /* --------------------------------------------------------------------------
+     COLOR TOKENS — Semantic
+     -------------------------------------------------------------------------- */
+  --color-success: #287a53;
+  --color-warning: #a66a19;
+  --color-error: #b9382d;
+  --color-info: #386a8e;
+
+  /* --------------------------------------------------------------------------
+     COLOR TOKENS — Focus
+     -------------------------------------------------------------------------- */
+  --color-focus-light: #11110f;
+  --color-focus-dark: #f5f2ea;
+
+  /* --------------------------------------------------------------------------
+     SPACING TOKENS
+     Base: 4px. Canonical values: 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 144, 160, 192
+     -------------------------------------------------------------------------- */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-120: 120px;
+  --space-144: 144px;
+  --space-160: 160px;
+  --space-192: 192px;
+
+  /* --------------------------------------------------------------------------
+     CONTAINER TOKENS
+     -------------------------------------------------------------------------- */
+  --container-shell: 100%;
+  --container-content: 100%;
+  --container-reading: 720px;
+  --container-wide-media: 100%;
+
+  /* --------------------------------------------------------------------------
+     PADDING TOKENS — Responsive Horizontal
+     -------------------------------------------------------------------------- */
+  --padding-mobile: 20px;
+  --padding-tablet: 24px;
+  --padding-desktop: 32px;
+  --padding-large-desktop: 40px;
+
+  /* --------------------------------------------------------------------------
+     BORDER RADIUS TOKENS
+     -------------------------------------------------------------------------- */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-round: 999px;
+
+  /* --------------------------------------------------------------------------
+     BORDER TOKENS
+     -------------------------------------------------------------------------- */
+  --border-default: 1px solid var(--color-line);
+  --border-strong: 1px solid var(--color-line-strong);
+  --border-dark: 1px solid var(--color-dark-line);
+
+  /* --------------------------------------------------------------------------
+     SHADOW TOKENS
+     -------------------------------------------------------------------------- */
+  --shadow-modal: 0 12px 40px rgba(17, 17, 15, 0.1);
+
+  /* --------------------------------------------------------------------------
+     MOTION TOKENS — Duration
+     Deterministic defaults within canonical ranges:
+     - micro: 150–220ms → 180ms
+     - ui: 220–350ms → 280ms
+     - section: 450–700ms → 550ms
+     - media: 600–900ms → 750ms
+     -------------------------------------------------------------------------- */
+  --duration-micro: 180ms;
+  --duration-ui: 280ms;
+  --duration-section: 550ms;
+  --duration-media: 750ms;
+
+  /* --------------------------------------------------------------------------
+     MOTION TOKENS — Easing
+     -------------------------------------------------------------------------- */
+  --ease-primary: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-secondary: ease-out;
+
+  /* --------------------------------------------------------------------------
+     FOCUS TOKENS
+     -------------------------------------------------------------------------- */
+  --focus-width: 2px;
+  --focus-width-high-vis: 3px;
+  --focus-offset: 2px;
+  --focus-offset-high-vis: 3px;
+
+  /* --------------------------------------------------------------------------
+     Z-INDEX TOKENS
+     -------------------------------------------------------------------------- */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-dropdown: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}

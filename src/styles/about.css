@@ -1,0 +1,325 @@
+/* ==========================================================================
+   about.css — About Page Styles
+   123.design Design System — BUILD 011 + Visual Recovery
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   About Hero — Dark section
+   -------------------------------------------------------------------------- */
+
+.about-hero {
+  padding-block: var(--space-80) var(--space-64);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.about-hero__content {
+  max-width: var(--container-reading);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+/* --------------------------------------------------------------------------
+   About Philosophy
+   -------------------------------------------------------------------------- */
+
+.about-philosophy {
+  padding-block: var(--space-48);
+  border-top: 1px solid var(--color-line);
+}
+
+.about-philosophy__intro {
+  max-width: var(--container-reading);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  margin-bottom: var(--space-32);
+}
+
+.about-philosophy__principles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-40);
+}
+
+.about-philosophy__principle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-width: var(--container-reading);
+}
+
+@media (min-width: 768px) {
+  .about-philosophy__principles {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-40);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   About Disciplines — Dark section
+   -------------------------------------------------------------------------- */
+
+.about-disciplines {
+  padding-block: var(--space-48);
+  background-color: var(--color-dark-surface);
+  color: var(--color-dark-ink);
+}
+
+.about-disciplines__header {
+  max-width: var(--container-reading);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  margin-bottom: var(--space-24);
+}
+
+.about-disciplines__cta {
+  margin-top: var(--space-16);
+}
+
+.about-disciplines__link {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-dark-ink);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.about-disciplines__link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   About Process
+   -------------------------------------------------------------------------- */
+
+.about-process {
+  padding-block: var(--space-48);
+  border-top: 1px solid var(--color-line);
+}
+
+.about-process__header {
+  max-width: var(--container-reading);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  margin-bottom: var(--space-32);
+}
+
+.about-process__stages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.about-process__stage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.about-process__stage-code {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: 0.05em;
+}
+
+.about-process__stage-name {
+  font-family: var(--font-sans);
+  color: var(--color-ink-muted);
+}
+
+.about-process__stage-arrow {
+  color: var(--color-ink-muted);
+  margin-left: var(--space-4);
+}
+
+.about-process__cta {
+  margin-top: var(--space-32);
+}
+
+.about-process__link {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-ink);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.about-process__link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   About Team
+   -------------------------------------------------------------------------- */
+
+.about-team {
+  padding-block: var(--space-48);
+  border-top: 1px solid var(--color-line);
+}
+
+.about-team__header {
+  max-width: var(--container-reading);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  margin-bottom: var(--space-32);
+}
+
+.about-team__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-32);
+}
+
+.about-team__member {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.about-team__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-round);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.about-team__avatar--placeholder {
+  background-color: var(--color-surface-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 2.7vw, 2.625rem);
+  font-weight: 500;
+  color: var(--color-ink-muted);
+}
+
+.about-team__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .about-team__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-team__avatar {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-team__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   About Offices
+   -------------------------------------------------------------------------- */
+
+.about-offices {
+  padding-block: var(--space-48);
+  border-top: 1px solid var(--color-line);
+}
+
+.about-offices__header {
+  max-width: var(--container-reading);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  margin-bottom: var(--space-32);
+}
+
+.about-offices__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+}
+
+.about-offices__location {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .about-offices__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-offices__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   About CTA — Dark section
+   -------------------------------------------------------------------------- */
+
+.about-cta {
+  padding-block: var(--space-48) var(--space-64);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.about-cta__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  text-align: center;
+  align-items: center;
+}
+
+.about-cta__actions {
+  margin-top: var(--space-16);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .about-hero {
+    padding-block: var(--space-64) var(--space-40);
+  }
+
+  .about-philosophy {
+    padding-block: var(--space-48);
+  }
+
+  .about-disciplines {
+    padding-block: var(--space-48);
+  }
+
+  .about-process {
+    padding-block: var(--space-48);
+  }
+
+  .about-team {
+    padding-block: var(--space-48);
+  }
+
+  .about-offices {
+    padding-block: var(--space-48);
+  }
+
+  .about-cta {
+    padding-block: var(--space-48) var(--space-64);
+  }
+}

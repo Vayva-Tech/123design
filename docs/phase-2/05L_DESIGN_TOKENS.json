@@ -1,0 +1,697 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "project": "123.design Phase 2",
+    "version": "2.0.0",
+    "description": "Design tokens for 123.design website rebuild"
+  },
+  "colors": {
+    "light": {
+      "canvas": {
+        "value": "#F4F1EA",
+        "type": "color",
+        "description": "Primary background"
+      },
+      "canvas-subtle": {
+        "value": "#F8F6F1",
+        "type": "color",
+        "description": "Subtle background variation"
+      },
+      "surface": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "Card and elevated surface"
+      },
+      "surface-muted": {
+        "value": "#ECE9E2",
+        "type": "color",
+        "description": "Muted surface for secondary areas"
+      },
+      "ink": {
+        "value": "#11110F",
+        "type": "color",
+        "description": "Primary text color"
+      },
+      "ink-secondary": {
+        "value": "#4E504B",
+        "type": "color",
+        "description": "Secondary text color"
+      },
+      "ink-muted": {
+        "value": "#777970",
+        "type": "color",
+        "description": "Muted text for less important content"
+      },
+      "line": {
+        "value": "#D6D3CB",
+        "type": "color",
+        "description": "Default border/divider"
+      },
+      "line-strong": {
+        "value": "#A9A69D",
+        "type": "color",
+        "description": "Stronger border for emphasis"
+      }
+    },
+    "dark": {
+      "canvas": {
+        "value": "#11110F",
+        "type": "color",
+        "description": "Primary dark background"
+      },
+      "surface": {
+        "value": "#191A17",
+        "type": "color",
+        "description": "Dark surface"
+      },
+      "surface-elevated": {
+        "value": "#22231F",
+        "type": "color",
+        "description": "Elevated dark surface"
+      },
+      "ink": {
+        "value": "#F5F2EA",
+        "type": "color",
+        "description": "Primary dark mode text"
+      },
+      "ink-secondary": {
+        "value": "#B7B6AF",
+        "type": "color",
+        "description": "Secondary dark mode text"
+      },
+      "line": {
+        "value": "#363732",
+        "type": "color",
+        "description": "Dark mode border"
+      }
+    },
+    "accent": {
+      "default": {
+        "value": "#F05A36",
+        "type": "color",
+        "description": "Primary accent color"
+      },
+      "hover": {
+        "value": "#D94A29",
+        "type": "color",
+        "description": "Accent hover state"
+      },
+      "soft": {
+        "value": "#F8D9CF",
+        "type": "color",
+        "description": "Soft accent for backgrounds"
+      },
+      "dark-context": {
+        "value": "#FF7554",
+        "type": "color",
+        "description": "Accent adjusted for dark backgrounds"
+      }
+    },
+    "semantic": {
+      "success": {
+        "value": "#287A53",
+        "type": "color",
+        "description": "Success state"
+      },
+      "warning": {
+        "value": "#A66A19",
+        "type": "color",
+        "description": "Warning state"
+      },
+      "error": {
+        "value": "#B9382D",
+        "type": "color",
+        "description": "Error state"
+      },
+      "info": {
+        "value": "#386A8E",
+        "type": "color",
+        "description": "Information state"
+      }
+    },
+    "focus": {
+      "light": {
+        "value": "#11110F",
+        "type": "color",
+        "description": "Focus ring on light backgrounds"
+      },
+      "dark": {
+        "value": "#F5F2EA",
+        "type": "color",
+        "description": "Focus ring on dark backgrounds"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": {
+        "value": "Inter Tight",
+        "type": "fontFamily",
+        "description": "Display and heading font"
+      },
+      "text": {
+        "value": "Inter",
+        "type": "fontFamily",
+        "description": "Body and UI text font"
+      }
+    },
+    "fontWeight": {
+      "regular": {
+        "value": 400,
+        "type": "fontWeight"
+      },
+      "medium": {
+        "value": 500,
+        "type": "fontWeight"
+      },
+      "semibold": {
+        "value": 600,
+        "type": "fontWeight"
+      },
+      "bold": {
+        "value": 700,
+        "type": "fontWeight"
+      }
+    },
+    "fontSize": {
+      "desktop": {
+        "display-xl": {
+          "value": "clamp(5rem, 7.4vw, 7rem)",
+          "type": "fontSize",
+          "range": "80–112px",
+          "description": "Hero display text"
+        },
+        "display-l": {
+          "value": "clamp(4rem, 5.5vw, 5.5rem)",
+          "type": "fontSize",
+          "range": "64–88px",
+          "description": "Large display text"
+        },
+        "h1": {
+          "value": "clamp(3.5rem, 4.5vw, 4.5rem)",
+          "type": "fontSize",
+          "range": "56–72px",
+          "description": "Page heading level 1"
+        },
+        "h2": {
+          "value": "clamp(2.75rem, 3.8vw, 3.75rem)",
+          "type": "fontSize",
+          "range": "44–60px",
+          "description": "Page heading level 2"
+        },
+        "h3": {
+          "value": "clamp(2rem, 2.7vw, 2.625rem)",
+          "type": "fontSize",
+          "range": "32–42px",
+          "description": "Section heading"
+        },
+        "h4": {
+          "value": "clamp(1.5rem, 1.9vw, 1.875rem)",
+          "type": "fontSize",
+          "range": "24–30px",
+          "description": "Subsection heading"
+        },
+        "lead": {
+          "value": "clamp(1.25rem, 1.5vw, 1.5rem)",
+          "type": "fontSize",
+          "range": "20–24px",
+          "description": "Lead paragraph text"
+        },
+        "body-lg": {
+          "value": "clamp(1.125rem, 1.2vw, 1.25rem)",
+          "type": "fontSize",
+          "range": "18–20px",
+          "description": "Large body text"
+        },
+        "body": {
+          "value": "clamp(1rem, 1.1vw, 1.125rem)",
+          "type": "fontSize",
+          "range": "16–18px",
+          "description": "Default body text"
+        },
+        "small": {
+          "value": "clamp(0.875rem, 0.94vw, 0.9375rem)",
+          "type": "fontSize",
+          "range": "14–15px",
+          "description": "Small text"
+        },
+        "micro": {
+          "value": "clamp(0.75rem, 0.82vw, 0.8125rem)",
+          "type": "fontSize",
+          "range": "12–13px",
+          "description": "Micro text, labels"
+        }
+      },
+      "mobile": {
+        "hero": {
+          "value": "48–60px",
+          "type": "fontSize",
+          "description": "Mobile hero text"
+        },
+        "h1": {
+          "value": "44–52px",
+          "type": "fontSize",
+          "description": "Mobile h1"
+        },
+        "h2": {
+          "value": "36–44px",
+          "type": "fontSize",
+          "description": "Mobile h2"
+        },
+        "h3": {
+          "value": "28–34px",
+          "type": "fontSize",
+          "description": "Mobile h3"
+        },
+        "h4": {
+          "value": "22–26px",
+          "type": "fontSize",
+          "description": "Mobile h4"
+        },
+        "lead": {
+          "value": "18–20px",
+          "type": "fontSize",
+          "description": "Mobile lead text"
+        },
+        "body": {
+          "value": "16–17px",
+          "type": "fontSize",
+          "description": "Mobile body text"
+        },
+        "small": {
+          "value": "14px",
+          "type": "fontSize",
+          "description": "Mobile small text"
+        },
+        "micro": {
+          "value": "12px",
+          "type": "fontSize",
+          "description": "Mobile micro text"
+        }
+      }
+    },
+    "lineHeight": {
+      "display-xl": {
+        "value": "0.90–0.96",
+        "type": "lineHeight",
+        "description": "Hero display line height"
+      },
+      "display-l": {
+        "value": "0.95–1.0",
+        "type": "lineHeight",
+        "description": "Large display line height"
+      },
+      "h1": {
+        "value": "1.0–1.05",
+        "type": "lineHeight",
+        "description": "H1 line height"
+      },
+      "h2": {
+        "value": "1.05–1.10",
+        "type": "lineHeight",
+        "description": "H2 line height"
+      },
+      "h3": {
+        "value": "1.10–1.18",
+        "type": "lineHeight",
+        "description": "H3 line height"
+      },
+      "h4": {
+        "value": "1.15–1.25",
+        "type": "lineHeight",
+        "description": "H4 line height"
+      },
+      "lead": {
+        "value": "1.40–1.50",
+        "type": "lineHeight",
+        "description": "Lead text line height"
+      },
+      "body-lg": {
+        "value": "1.50–1.60",
+        "type": "lineHeight",
+        "description": "Large body text line height"
+      },
+      "body": {
+        "value": "1.50–1.65",
+        "type": "lineHeight",
+        "description": "Body text line height"
+      },
+      "small": {
+        "value": "1.45–1.55",
+        "type": "lineHeight",
+        "description": "Small text line height"
+      },
+      "micro": {
+        "value": "1.40–1.50",
+        "type": "lineHeight",
+        "description": "Micro text line height"
+      }
+    },
+    "letterSpacing": {
+      "display-xl": {
+        "value": "-0.045em to -0.03em",
+        "type": "letterSpacing",
+        "description": "Hero display letter spacing"
+      },
+      "display-l": {
+        "value": "-0.03em to -0.025em",
+        "type": "letterSpacing",
+        "description": "Large display letter spacing"
+      },
+      "h1": {
+        "value": "-0.025em to -0.02em",
+        "type": "letterSpacing",
+        "description": "H1 letter spacing"
+      },
+      "h2": {
+        "value": "-0.025em to -0.02em",
+        "type": "letterSpacing",
+        "description": "H2 letter spacing"
+      },
+      "h3": {
+        "value": "-0.015em to -0.01em",
+        "type": "letterSpacing",
+        "description": "H3 letter spacing"
+      },
+      "h4": {
+        "value": "-0.015em to -0.01em",
+        "type": "letterSpacing",
+        "description": "H4 letter spacing"
+      },
+      "lead": {
+        "value": "-0.005em to 0",
+        "type": "letterSpacing",
+        "description": "Lead text letter spacing"
+      },
+      "body-lg": {
+        "value": "0 to +0.005em",
+        "type": "letterSpacing",
+        "description": "Large body text letter spacing"
+      },
+      "body": {
+        "value": "0 to +0.005em",
+        "type": "letterSpacing",
+        "description": "Body text letter spacing"
+      },
+      "small": {
+        "value": "+0.005em to +0.01em",
+        "type": "letterSpacing",
+        "description": "Small text letter spacing"
+      },
+      "micro": {
+        "value": "+0.01em to +0.02em",
+        "type": "letterSpacing",
+        "description": "Micro text letter spacing"
+      },
+      "eyebrow": {
+        "value": "0.08em to 0.12em",
+        "type": "letterSpacing",
+        "description": "Eyebrow text letter spacing"
+      }
+    }
+  },
+  "spacing": {
+    "2": {
+      "value": "2px",
+      "type": "spacing"
+    },
+    "4": {
+      "value": "4px",
+      "type": "spacing"
+    },
+    "8": {
+      "value": "8px",
+      "type": "spacing"
+    },
+    "12": {
+      "value": "12px",
+      "type": "spacing"
+    },
+    "16": {
+      "value": "16px",
+      "type": "spacing"
+    },
+    "20": {
+      "value": "20px",
+      "type": "spacing"
+    },
+    "24": {
+      "value": "24px",
+      "type": "spacing"
+    },
+    "32": {
+      "value": "32px",
+      "type": "spacing"
+    },
+    "40": {
+      "value": "40px",
+      "type": "spacing"
+    },
+    "48": {
+      "value": "48px",
+      "type": "spacing"
+    },
+    "64": {
+      "value": "64px",
+      "type": "spacing"
+    },
+    "80": {
+      "value": "80px",
+      "type": "spacing"
+    },
+    "96": {
+      "value": "96px",
+      "type": "spacing"
+    },
+    "120": {
+      "value": "120px",
+      "type": "spacing"
+    },
+    "144": {
+      "value": "144px",
+      "type": "spacing"
+    },
+    "160": {
+      "value": "160px",
+      "type": "spacing"
+    },
+    "192": {
+      "value": "192px",
+      "type": "spacing"
+    }
+  },
+  "container": {
+    "shell-max": {
+      "value": "1440px",
+      "type": "sizing",
+      "description": "Maximum shell width"
+    },
+    "content-max": {
+      "value": "1280px",
+      "type": "sizing",
+      "description": "Maximum content width"
+    },
+    "reading-max": {
+      "value": "720px",
+      "type": "sizing",
+      "description": "Maximum width for reading content"
+    },
+    "wide-media-max": {
+      "value": "1440px",
+      "type": "sizing",
+      "description": "Maximum width for wide media"
+    }
+  },
+  "padding": {
+    "desktop": {
+      "value": "32px",
+      "type": "spacing",
+      "description": "Desktop horizontal padding"
+    },
+    "large-desktop": {
+      "value": "40–48px",
+      "type": "spacing",
+      "description": "Large desktop horizontal padding"
+    },
+    "tablet": {
+      "value": "24px",
+      "type": "spacing",
+      "description": "Tablet horizontal padding"
+    },
+    "mobile": {
+      "value": "20px",
+      "type": "spacing",
+      "description": "Mobile horizontal padding"
+    },
+    "small-mobile": {
+      "value": "16px",
+      "type": "spacing",
+      "description": "Small mobile horizontal padding"
+    }
+  },
+  "grid": {
+    "desktop": {
+      "columns": {
+        "value": 12,
+        "type": "dimension"
+      },
+      "gap": {
+        "value": "24–32px",
+        "type": "spacing"
+      }
+    },
+    "tablet": {
+      "columns": {
+        "value": 8,
+        "type": "dimension"
+      },
+      "gap": {
+        "value": "20–24px",
+        "type": "spacing"
+      }
+    },
+    "mobile": {
+      "columns": {
+        "value": 4,
+        "type": "dimension"
+      },
+      "gap": {
+        "value": "16px",
+        "type": "spacing"
+      }
+    }
+  },
+  "borderRadius": {
+    "xs": {
+      "value": "3px",
+      "type": "borderRadius"
+    },
+    "sm": {
+      "value": "6px",
+      "type": "borderRadius"
+    },
+    "md": {
+      "value": "10px",
+      "type": "borderRadius"
+    },
+    "lg": {
+      "value": "16px",
+      "type": "borderRadius"
+    },
+    "round": {
+      "value": "999px",
+      "type": "borderRadius"
+    }
+  },
+  "border": {
+    "default": {
+      "value": "1px solid",
+      "type": "border",
+      "description": "Default border style"
+    },
+    "strong": {
+      "value": "1px solid",
+      "type": "border",
+      "description": "Strong border style"
+    }
+  },
+  "boxShadow": {
+    "modal": {
+      "value": "0 12px 40px rgba(17,17,15,0.10)",
+      "type": "boxShadow",
+      "description": "Modal shadow"
+    }
+  },
+  "motion": {
+    "duration": {
+      "micro": {
+        "value": "150–220ms",
+        "type": "duration",
+        "description": "Micro interactions"
+      },
+      "ui": {
+        "value": "220–350ms",
+        "type": "duration",
+        "description": "UI transitions"
+      },
+      "section-reveal": {
+        "value": "450–700ms",
+        "type": "duration",
+        "description": "Section reveal animations"
+      },
+      "media-reveal": {
+        "value": "600–900ms",
+        "type": "duration",
+        "description": "Media reveal animations"
+      }
+    },
+    "easing": {
+      "primary": {
+        "value": "cubic-bezier(.22,1,.36,1)",
+        "type": "easing",
+        "description": "Primary easing curve"
+      },
+      "secondary": {
+        "value": "ease-out",
+        "type": "easing",
+        "description": "Secondary easing curve"
+      }
+    }
+  },
+  "breakpoint": {
+    "xs": {
+      "value": "360px",
+      "type": "breakpoint"
+    },
+    "sm": {
+      "value": "390px",
+      "type": "breakpoint"
+    },
+    "md": {
+      "value": "768px",
+      "type": "breakpoint"
+    },
+    "lg": {
+      "value": "1024px",
+      "type": "breakpoint"
+    },
+    "xl": {
+      "value": "1280px",
+      "type": "breakpoint"
+    },
+    "2xl": {
+      "value": "1536px",
+      "type": "breakpoint"
+    }
+  },
+  "zIndex": {
+    "base": {
+      "value": 0,
+      "type": "zIndex"
+    },
+    "raised": {
+      "value": 10,
+      "type": "zIndex"
+    },
+    "sticky": {
+      "value": 100,
+      "type": "zIndex"
+    },
+    "dropdown": {
+      "value": 200,
+      "type": "zIndex"
+    },
+    "overlay": {
+      "value": 300,
+      "type": "zIndex"
+    },
+    "modal": {
+      "value": 400,
+      "type": "zIndex"
+    },
+    "toast": {
+      "value": 500,
+      "type": "zIndex"
+    }
+  }
+}

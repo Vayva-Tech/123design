@@ -1,0 +1,7 @@
+extension,mime_type,count,total_bytes,percentage_of_files,percentage_of_storage
+.jpg,,928,439280313,93.45,54.73
+.mp4,,45,234631711,4.53,29.23
+.jpeg,,10,14885060,1.01,1.85
+.png,,7,25749757,0.7,3.21
+,,2,9785890,0.2,1.22
+.zip,,1,78251418,0.1,9.75

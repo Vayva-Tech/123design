@@ -1,0 +1,110 @@
+/* ==========================================================================
+   start-project.css — Start a Project Page Styles
+   123.design Design System — BUILD 011
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Start Project Hero — Dark section
+   -------------------------------------------------------------------------- */
+
+.start-project-hero {
+  padding-block: var(--space-80) var(--space-64);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.start-project-hero__content {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+/* --------------------------------------------------------------------------
+   Start Project Body
+   -------------------------------------------------------------------------- */
+
+.start-project-body {
+  padding-block: var(--space-48) var(--space-64);
+  border-top: 1px solid var(--color-line);
+}
+
+.start-project-body__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+/* --------------------------------------------------------------------------
+   Start Project Steps
+   -------------------------------------------------------------------------- */
+
+.start-project-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+}
+
+.start-project-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.start-project-step__number {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .start-project-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Start Project Contact
+   -------------------------------------------------------------------------- */
+
+.start-project-contact {
+  padding-block: var(--space-32);
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.start-project-link {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.start-project-link:hover {
+  text-decoration-thickness: 2px;
+  color: var(--color-accent-hover);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .start-project-hero {
+    padding-block: var(--space-64) var(--space-40);
+  }
+
+  .start-project-body {
+    padding-block: var(--space-32) var(--space-48);
+  }
+}

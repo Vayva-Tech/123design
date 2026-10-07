@@ -1,0 +1,2 @@
+asset_id,relative_path,filename,extension,media_class,size_bytes,width,height,sha256,resolution_class,source_project_candidate,uniqueness_status,notes
+AST-000174,ALL/iaMedium-1 copy.jpg,iaMedium-1 copy.jpg,.jpg,IMAGE,141283,660,495,9827d47e55469bc8d2f0960d8cd30a8b51cfebfa98a79adce71f2737e999ac29,VERY_LOW,,UNIQUE_TO_ALL,No copy found in any category folder

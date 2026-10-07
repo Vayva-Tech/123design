@@ -1,0 +1,90 @@
+/* ==========================================================================
+   contact.css — Contact Page Styles
+   123.design Design System — BUILD 011
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Contact Hero — Dark section
+   -------------------------------------------------------------------------- */
+
+.contact-hero {
+  padding-block: var(--space-80) var(--space-64);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.contact-hero__content {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+/* --------------------------------------------------------------------------
+   Contact Body
+   -------------------------------------------------------------------------- */
+
+.contact-body {
+  padding-block: var(--space-48) var(--space-64);
+  border-top: 1px solid var(--color-line);
+}
+
+.contact-body__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+/* --------------------------------------------------------------------------
+   Contact Channels
+   -------------------------------------------------------------------------- */
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+.contact-channel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-24);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.contact-link {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.contact-link:hover {
+  text-decoration-thickness: 2px;
+  color: var(--color-accent-hover);
+}
+
+@media (min-width: 768px) {
+  .contact-channels {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .contact-hero {
+    padding-block: var(--space-64) var(--space-40);
+  }
+
+  .contact-body {
+    padding-block: var(--space-32) var(--space-48);
+  }
+}

@@ -1,0 +1,1425 @@
+/* ==========================================================================
+   home.css — Homepage Styles
+   123.design — Phase 2 Visual Recovery
+   Dark/Light rhythm: Hero DARK → Credibility DARK → Featured LIGHT →
+   Lifecycle DARK → Workflow LIGHT → Capabilities DARK → Testimonial DARK →
+   Manufacturing LIGHT → Final CTA DARK
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PAGE OVERLAY — Header transparency on homepage hero
+   -------------------------------------------------------------------------- */
+
+body:has([data-page-overlay='dark']) > .site-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  border-bottom-color: transparent;
+  color: var(--color-dark-ink);
+}
+
+body:has([data-page-overlay='dark']) > .site-header .brand-mark {
+  color: var(--color-dark-ink);
+}
+
+body:has([data-page-overlay='dark']) > .site-header .nav-link {
+  color: var(--color-dark-ink);
+}
+
+body:has([data-page-overlay='dark']) > .site-header .disclosure-trigger {
+  color: var(--color-dark-ink);
+}
+
+body:has([data-page-overlay='dark']) > .site-header .mobile-menu-trigger {
+  color: var(--color-dark-ink);
+}
+
+body:has([data-page-overlay='dark']) > .site-header .header-cta .btn {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  border-color: transparent;
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) > .site-header {
+  background-color: var(--color-canvas);
+  border-bottom-color: var(--color-line);
+  color: var(--color-ink);
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) > .site-header .brand-mark {
+  color: var(--color-ink);
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) > .site-header .nav-link {
+  color: var(--color-ink);
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) > .site-header .disclosure-trigger {
+  color: var(--color-ink);
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) > .site-header .mobile-menu-trigger {
+  color: var(--color-ink);
+}
+
+html[data-header-scrolled='true'] body:has([data-page-overlay='dark']) > .site-header .header-cta .btn {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* --------------------------------------------------------------------------
+   MULTI-LINE HEADING LINES
+   -------------------------------------------------------------------------- */
+
+.heading-lines > span {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION — DARK
+   Left/right split: copy (45%) + dominant image (55%)
+   -------------------------------------------------------------------------- */
+
+.home-hero {
+  position: relative;
+  width: 100%;
+  min-height: 88svh;
+  padding-block: calc(var(--space-80) + var(--space-80)) var(--space-96);
+  overflow: hidden;
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.home-hero__split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+  align-items: center;
+}
+
+.home-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  color: var(--color-dark-ink);
+  width: 100%;
+  min-width: 0;
+}
+
+.home-hero__copy .eyebrow-text {
+  color: var(--color-dark-ink-secondary);
+}
+
+.home-hero__copy .btn[data-variant='secondary'] {
+  color: var(--color-dark-ink);
+  border-color: var(--color-dark-line);
+}
+
+.home-hero__copy .btn[data-variant='secondary']:hover {
+  border-color: var(--color-dark-ink-secondary);
+}
+
+.home-hero__heading {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.home-hero__supporting {
+  max-width: 52ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+.home-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  padding-top: var(--space-12);
+}
+
+.home-hero__visual {
+  width: 100%;
+  max-width: 720px;
+}
+
+.home-hero__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .home-hero__split {
+    flex-direction: row;
+    gap: var(--space-64);
+    align-items: center;
+  }
+
+  .home-hero__copy {
+    flex: 0 1 45%;
+  }
+
+  .home-hero__visual {
+    flex: 0 1 55%;
+    max-width: none;
+  }
+}
+
+.home-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+  padding-block: var(--space-32);
+  margin-block: var(--space-40);
+  border-block-start: 1px solid var(--color-dark-line);
+  border-block-end: 1px solid var(--color-dark-line);
+}
+
+.home-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.home-hero__stat-value {
+  font-size: var(--type-display-sm);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-dark-ink);
+}
+
+.home-hero__stat-label {
+  color: var(--color-dark-ink-secondary);
+}
+
+.home-hero__clients {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-24);
+  padding-block: var(--space-16);
+}
+
+.home-hero__client {
+  letter-spacing: 0.12em;
+  color: var(--color-dark-ink-secondary);
+  opacity: 0.7;
+  transition: opacity var(--motion-fast) ease;
+}
+
+.home-hero__client:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .home-hero {
+    min-height: auto;
+    padding-block: calc(var(--space-80) + var(--space-24)) var(--space-48);
+  }
+
+  .home-hero__heading .type-display-xl {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .home-hero__stats {
+    gap: var(--space-16);
+    padding-block: var(--space-24);
+    margin-block: var(--space-32);
+  }
+
+  .home-hero__clients {
+    gap: var(--space-16);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HERO REEL WRAPPER & CAPTION
+   -------------------------------------------------------------------------- */
+
+.home-hero__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero__caption {
+  position: absolute;
+  bottom: var(--space-24);
+  left: var(--space-24);
+  z-index: 10;
+  padding: var(--space-8) var(--space-16);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+}
+
+.home-hero__caption-text {
+  font: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   CREDIBILITY STRIP — DARK
+   -------------------------------------------------------------------------- */
+
+.home-credibility {
+  padding-block: var(--space-32);
+  border-block-end: 1px solid var(--color-dark-line);
+  background: var(--color-dark-surface);
+}
+
+.home-credibility__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  text-align: center;
+}
+
+.home-credibility__tagline {
+  font: var(--text-xs);
+  letter-spacing: 0.2em;
+  color: var(--color-dark-ink);
+  margin: 0;
+}
+
+.home-credibility__phases {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.home-credibility__phase {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.home-credibility__phase-label {
+  font: var(--text-xs);
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+}
+
+.home-credibility__phase-sep {
+  color: var(--color-muted);
+  font: var(--text-xs);
+}
+
+.home-credibility__capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.home-credibility__capability {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  font: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-dark-ink);
+  opacity: 0.7;
+}
+
+.home-credibility__cap-sep {
+  color: var(--color-muted);
+}
+
+.home-credibility__logos {
+  margin-block-start: var(--space-32);
+  padding-block: var(--space-24);
+  overflow: hidden;
+  border-block-start: 1px solid var(--color-dark-line);
+  position: relative;
+}
+
+.home-credibility__logos::before,
+.home-credibility__logos::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-credibility__logos::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-dark-surface), transparent);
+}
+
+.home-credibility__logos::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-dark-surface), transparent);
+}
+
+.home-credibility__logos-track {
+  display: flex;
+  gap: var(--space-48);
+  animation: logo-scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.home-credibility__logo {
+  font: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-dark-ink);
+  opacity: 0.5;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.home-credibility__logo:hover {
+  opacity: 0.8;
+}
+
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FEATURED WORK — LIGHT
+   3-column grid. Fallback gallery when CMS projects empty.
+   -------------------------------------------------------------------------- */
+
+.home-featured {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-canvas);
+}
+
+.home-featured__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-bottom: var(--space-32);
+}
+
+.home-featured__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.home-featured__header-meta {
+  color: var(--color-ink-muted);
+}
+
+.home-featured__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-bottom: var(--space-32);
+}
+
+.home-featured__filter {
+  padding: var(--space-8) var(--space-16);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-round);
+  background: transparent;
+  color: var(--color-ink-secondary);
+  font: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--motion-fast) ease;
+}
+
+.home-featured__filter:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+.home-featured__filter[aria-selected='true'] {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.home-featured__view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-block-start: var(--space-40);
+  color: var(--color-ink);
+  font: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap var(--motion-fast) ease;
+}
+
+.home-featured__view-all:hover {
+  gap: var(--space-12);
+}
+
+.home-featured__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .home-featured__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-featured__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-featured__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-featured__fallback-card {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+}
+
+.home-featured__fallback-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   PROJECT CARD
+   -------------------------------------------------------------------------- */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.project-card__industry {
+  color: var(--color-ink-secondary);
+}
+
+.project-card__capability {
+  color: var(--color-ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   LIFECYCLE SECTION — DARK
+   Timeline with stage images.
+   -------------------------------------------------------------------------- */
+
+.home-lifecycle {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.home-lifecycle__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-bottom: var(--space-40);
+}
+
+.home-lifecycle__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.home-lifecycle__header-desc {
+  max-width: 48ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+@media (min-width: 768px) {
+  .home-lifecycle__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-40);
+  }
+
+  .home-lifecycle__header-text {
+    flex: 0 1 55%;
+  }
+
+  .home-lifecycle__header-desc {
+    flex: 0 1 40%;
+  }
+}
+
+.home-lifecycle__timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.home-lifecycle__rail {
+  display: none;
+}
+
+.home-lifecycle__stage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.home-lifecycle__media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-dark-surface);
+  margin-left: 0;
+}
+
+.home-lifecycle__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-lifecycle__node {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.home-lifecycle__code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: var(--radius-round);
+  background-color: var(--color-accent-dark-context);
+  color: var(--color-dark-canvas);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.home-lifecycle__connector {
+  display: none;
+}
+
+.home-lifecycle__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.home-lifecycle__content h3 {
+  color: var(--color-dark-ink);
+}
+
+.home-lifecycle__description {
+  color: var(--color-dark-ink-secondary);
+  font-size: var(--type-body);
+}
+
+@media (min-width: 768px) {
+  .home-lifecycle__timeline {
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .home-lifecycle__rail {
+    display: none;
+  }
+
+  .home-lifecycle__stage {
+    flex: 1;
+    align-items: center;
+    gap: var(--space-12);
+    padding-inline: var(--space-12);
+  }
+
+  .home-lifecycle__media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .home-lifecycle__node {
+    align-items: center;
+  }
+
+  .home-lifecycle__connector {
+    display: block;
+    width: 2px;
+    height: var(--space-16);
+    background-color: var(--color-dark-line);
+  }
+
+  .home-lifecycle__content {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-lifecycle__code {
+    min-width: 36px;
+    height: 36px;
+    font-size: 0.6875rem;
+  }
+
+  .home-lifecycle__stage {
+    padding-inline: var(--space-16);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   WORKFLOW SECTION — LIGHT
+   Left/right split: heading+copy (45%) / 8-item icon matrix (55%)
+   -------------------------------------------------------------------------- */
+
+.home-workflow {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-canvas);
+}
+
+.home-workflow__split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+}
+
+.home-workflow__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.home-workflow__supporting {
+  max-width: 48ch;
+  color: var(--color-ink-secondary);
+}
+
+.home-workflow__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-16);
+}
+
+.home-workflow__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-12) var(--space-16);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+}
+
+.home-workflow__icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--color-ink);
+}
+
+.home-workflow__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.home-workflow__label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+}
+
+@media (min-width: 768px) {
+  .home-workflow__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .home-workflow__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-8);
+    padding: var(--space-16);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-workflow__split {
+    flex-direction: row;
+    gap: var(--space-64);
+    align-items: flex-start;
+  }
+
+  .home-workflow__copy {
+    flex: 0 1 45%;
+  }
+
+  .home-workflow__grid {
+    flex: 0 1 55%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CAPABILITIES SECTION — DARK
+   6 image-led tiles with label overlay.
+   -------------------------------------------------------------------------- */
+
+.home-capabilities {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.home-capabilities__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.home-capabilities__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.home-capabilities__header-desc {
+  max-width: 48ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+@media (min-width: 768px) {
+  .home-capabilities__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-40);
+  }
+
+  .home-capabilities__header-text {
+    flex: 0 1 55%;
+  }
+
+  .home-capabilities__header-desc {
+    flex: 0 1 40%;
+  }
+}
+
+.home-capabilities__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .home-capabilities__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-capabilities__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-capabilities__tile {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-dark-surface);
+}
+
+.home-capabilities__media {
+  position: absolute;
+  inset: 0;
+}
+
+.home-capabilities__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-capabilities__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-16);
+  background: linear-gradient(to top, rgba(0 0 0 / 0.45) 0%, transparent 50%);
+}
+
+.home-capabilities__label {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   TESTIMONIAL SECTION — DARK
+   -------------------------------------------------------------------------- */
+
+.home-testimonial {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-dark-surface);
+  color: var(--color-dark-ink);
+}
+
+.home-testimonial__split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+}
+
+.home-testimonial__quote-wrap {
+  flex: 0 1 55%;
+}
+
+.home-testimonial__quote {
+  max-width: 32ch;
+  margin-bottom: var(--space-24);
+  color: var(--color-dark-ink);
+}
+
+.home-testimonial__attribution {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.home-testimonial__role {
+  color: var(--color-dark-ink-secondary);
+}
+
+.home-testimonial__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+  padding-block: var(--space-24);
+  border-block-start: 1px solid var(--color-dark-line);
+}
+
+.home-testimonial__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.home-testimonial__stat-value {
+  font-size: var(--type-display-sm);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-dark-ink);
+}
+
+.home-testimonial__stat-label {
+  color: var(--color-dark-ink-secondary);
+}
+
+@media (min-width: 1024px) {
+  .home-testimonial__split {
+    flex-direction: row;
+    gap: var(--space-64);
+    align-items: center;
+  }
+
+  .home-testimonial__stats {
+    flex: 0 1 40%;
+    border-block-start: none;
+    border-inline-start: 1px solid var(--color-dark-line);
+    padding-inline-start: var(--space-40);
+  }
+}
+
+.home-testimonial__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  margin-block-start: var(--space-24);
+}
+
+.home-testimonial__pause {
+  background: none;
+  border: 1px solid var(--color-dark-line);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-dark-ink);
+  font-size: 12px;
+  padding: 0;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.home-testimonial__pause:hover {
+  opacity: 0.7;
+}
+
+.home-testimonial__indicators {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.home-testimonial__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-dark-ink);
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.home-testimonial__indicator:hover {
+  opacity: 0.6;
+}
+
+.home-testimonial__indicator--active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* --------------------------------------------------------------------------
+   MANUFACTURING SECTION — LIGHT
+   Left/right split: text+bullets (50%) / single image (50%)
+   -------------------------------------------------------------------------- */
+
+.home-manufacturing {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-canvas);
+}
+
+.home-manufacturing__split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+}
+
+.home-manufacturing__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.home-manufacturing__body {
+  max-width: 56ch;
+  color: var(--color-ink-secondary);
+}
+
+.home-manufacturing__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.home-manufacturing__bullet {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.home-manufacturing__bullet::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.home-manufacturing__media {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.home-manufacturing__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .home-manufacturing__split {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-64);
+  }
+
+  .home-manufacturing__text {
+    flex: 0 1 50%;
+  }
+
+  .home-manufacturing__media {
+    flex: 0 1 50%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FINAL CTA SECTION — DARK
+   Left/right split: copy (50%) / image (50%)
+   -------------------------------------------------------------------------- */
+
+.home-final-cta {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+  overflow: hidden;
+}
+
+.home-final-cta__split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+  align-items: center;
+}
+
+.home-final-cta__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.home-final-cta__body {
+  max-width: 48ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+.home-final-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  padding-top: var(--space-8);
+}
+
+.home-final-cta .btn[data-variant='secondary'] {
+  color: var(--color-dark-ink);
+  border-color: var(--color-dark-line);
+}
+
+.home-final-cta .btn[data-variant='secondary']:hover {
+  border-color: var(--color-dark-ink-secondary);
+}
+
+.home-final-cta__visual {
+  width: 100%;
+  max-width: 640px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.home-final-cta__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .home-final-cta__split {
+    flex-direction: row;
+    gap: var(--space-64);
+  }
+
+  .home-final-cta__copy {
+    flex: 0 1 50%;
+  }
+
+  .home-final-cta__visual {
+    flex: 0 1 50%;
+    max-width: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   INDUSTRIES SECTION (preserved for /industries page)
+   -------------------------------------------------------------------------- */
+
+.home-industries {
+  padding-block: var(--space-48);
+}
+
+.home-industries__header {
+  margin-bottom: var(--space-32);
+}
+
+.home-industries__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .home-industries__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-industries__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-industries__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-24);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+}
+
+.home-industries__description {
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   HOW WE WORK SECTION (preserved for /process page)
+   -------------------------------------------------------------------------- */
+
+.home-how-we-work {
+  padding-block: var(--space-48);
+  background-color: var(--color-surface);
+}
+
+.home-how-we-work__header {
+  margin-bottom: var(--space-32);
+}
+
+.home-how-we-work__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .home-how-we-work__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-how-we-work__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.home-how-we-work__principle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.home-how-we-work__description {
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   YOUTUBE EMBED — Responsive 16:9 iframe wrapper
+   -------------------------------------------------------------------------- */
+
+.youtube-embed {
+  position: relative;
+  width: 100%;
+}
+
+.youtube-embed__wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-dark-surface);
+}
+
+.youtube-embed__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SHOWREEL SECTION — DARK
+   Video showcase between Featured Work and Lifecycle.
+   -------------------------------------------------------------------------- */
+
+.home-showreel {
+  padding-block: var(--space-64) var(--space-96);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.home-showreel__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-bottom: var(--space-32);
+}
+
+.home-showreel__video {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.video-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-lg, 12px);
+  background: var(--color-surface-elevated, #111);
+}
+
+.video-carousel__stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-carousel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.video-carousel__slide--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.video-carousel__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-carousel__media-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-carousel__caption {
+  position: absolute;
+  bottom: var(--space-24);
+  left: var(--space-24);
+  z-index: 10;
+  padding: var(--space-8) var(--space-16);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+}
+
+.video-carousel__caption-text {
+  font: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+}
+
+.video-carousel__dots {
+  position: absolute;
+  bottom: var(--space-16, 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-8, 8px);
+  z-index: 2;
+}
+
+.video-carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.video-carousel__dot--active {
+  background: white;
+}
+
+.video-carousel__dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

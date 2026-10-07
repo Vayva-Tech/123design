@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="320" viewBox="0 0 512 320">
+  <defs>
+    <clipPath id="clip">
+      <text x="200" y="170" text-anchor="start" font-family="Inter,system-ui,-apple-system,sans-serif" font-size="140" font-weight="900" letter-spacing="-4">123</text>
+    </clipPath>
+  </defs>
+  <text x="200" y="170" text-anchor="start" font-family="Inter,system-ui,-apple-system,sans-serif" font-size="140" font-weight="900" letter-spacing="-4" fill="#0a0a0a">123</text>
+  <g clip-path="url(#clip)">
+    <line x1="100" y1="60" x2="420" y2="60" stroke="#F5F4F0" stroke-width="1.5" opacity=".8"/>
+    <line x1="100" y1="95" x2="420" y2="95" stroke="#F5F4F0" stroke-width="1.5" opacity=".8"/>
+    <line x1="100" y1="130" x2="420" y2="130" stroke="#F5F4F0" stroke-width="1.5" opacity=".8"/>
+    <line x1="100" y1="165" x2="420" y2="165" stroke="#F5F4F0" stroke-width="1.5" opacity=".8"/>
+    <line x1="170" y1="30" x2="170" y2="190" stroke="#F5F4F0" stroke-width="1.5" opacity=".7"/>
+    <line x1="256" y1="30" x2="256" y2="190" stroke="#F5F4F0" stroke-width="1.5" opacity=".7"/>
+    <line x1="342" y1="30" x2="342" y2="190" stroke="#F5F4F0" stroke-width="1.5" opacity=".7"/>
+    <line x1="140" y1="40" x2="210" y2="180" stroke="#F5F4F0" stroke-width="1.5" opacity=".75"/>
+    <line x1="280" y1="50" x2="360" y2="170" stroke="#F5F4F0" stroke-width="1.5" opacity=".75"/>
+    <line x1="110" y1="125" x2="180" y2="80" stroke="#F5F4F0" stroke-width="1.5" opacity=".65"/>
+    <line x1="310" y1="130" x2="380" y2="85" stroke="#F5F4F0" stroke-width="1.5" opacity=".65"/>
+    <circle cx="195" cy="110" r="45" fill="none" stroke="#F5F4F0" stroke-width="1.5" opacity=".7"/>
+    <circle cx="315" cy="120" r="35" fill="none" stroke="#F5F4F0" stroke-width="1.5" opacity=".65"/>
+    <path d="M150,70 Q200,40 250,90" fill="none" stroke="#F5F4F0" stroke-width="1.5" opacity=".7"/>
+    <path d="M260,80 Q310,50 360,100" fill="none" stroke="#F5F4F0" stroke-width="1.5" opacity=".65"/>
+    <path d="M170,150 Q220,125 270,160" fill="none" stroke="#F5F4F0" stroke-width="1.5" opacity=".6"/>
+  </g>
+  <text x="440" y="240" text-anchor="end" font-family="Inter,system-ui,-apple-system,sans-serif" font-size="72" font-weight="500" fill="#0a0a0a" letter-spacing="10">DESIGN</text>
+</svg>

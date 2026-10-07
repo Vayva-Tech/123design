@@ -1,0 +1,81 @@
+/* ==========================================================================
+   utilities.css — Focus System & Accessibility Utilities
+   123.design Design System — Phase 2
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FOCUS SYSTEM
+   Standard: 2px ring, 2px offset
+   High-vis: 3px ring, 3px offset
+   Light surfaces use --color-focus-light (#11110f)
+   Dark surfaces use --color-focus-dark (#f5f2ea)
+   -------------------------------------------------------------------------- */
+
+.focus-ring {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+}
+
+.focus-ring-high-vis {
+  outline: var(--focus-width-high-vis) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset-high-vis);
+}
+
+.focus-ring-dark {
+  outline: var(--focus-width) solid var(--color-focus-dark);
+  outline-offset: var(--focus-offset);
+}
+
+.focus-visible-ring:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset);
+}
+
+.focus-visible-ring-high-vis:focus-visible {
+  outline: var(--focus-width-high-vis) solid var(--color-focus-light);
+  outline-offset: var(--focus-offset-high-vis);
+}
+
+/* --------------------------------------------------------------------------
+   VISUALLY HIDDEN
+   Hides content visually while keeping it accessible to screen readers.
+   -------------------------------------------------------------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION
+   Targeted approach: only decorative motion is suppressed.
+   Essential state feedback (focus rings, loading spinners, expand/collapse)
+   is preserved for usability.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    --reduce-motion: 1;
+  }
+}
+
+html[data-reduced-motion] [data-motion='decorative'] {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion='decorative'] {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

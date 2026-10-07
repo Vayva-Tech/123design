@@ -1,0 +1,390 @@
+/* ==========================================================================
+   process.css — Process Page Styles
+   123.design — BUILD 010 PATCH 001 + Visual Recovery
+   Hero, lifecycle mosaic, stage detail sections, workflow steps, principles, CTA.
+   All styling via CSS classes. Zero inline styles.
+   Typography handled by Heading/Text components (type classes).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PROCESS HERO
+   Editorial intro with eyebrow, heading, supporting text.
+   -------------------------------------------------------------------------- */
+
+.process-hero {
+  padding-block: var(--space-80) var(--space-48);
+}
+
+.process-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.process-hero__title {
+  max-width: 20ch;
+}
+
+.process-hero__summary {
+  max-width: 52ch;
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   PROCESS MOSAIC — Dark section
+   Simplified lifecycle overview — code + label cards in a responsive grid.
+   -------------------------------------------------------------------------- */
+
+.process-mosaic {
+  padding-block: var(--space-48);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.process-mosaic__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 20ch;
+  margin-block-end: var(--space-32);
+}
+
+.process-mosaic__heading-line {
+  display: block;
+}
+
+.process-mosaic__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .process-mosaic__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-mosaic__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.process-mosaic__card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-16) var(--space-20);
+  border: 1px solid var(--color-dark-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-dark-surface);
+}
+
+.process-mosaic__media {
+  flex-shrink: 0;
+  width: 60px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.process-mosaic__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.process-mosaic__code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  padding: var(--space-4) var(--space-8);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark-context);
+  background-color: var(--color-dark-surface-elevated);
+  border: 1px solid var(--color-dark-line);
+  border-radius: var(--radius-xs);
+}
+
+.process-mosaic__label {
+  flex: 1;
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   PROCESS STAGE SECTION
+   Detailed view of a single lifecycle stage with activities list.
+   -------------------------------------------------------------------------- */
+
+.process-stage {
+  padding-block: var(--space-40);
+  border-block-start: 1px solid var(--color-line);
+}
+
+.process-stage__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-block-end: var(--space-24);
+}
+
+.process-stage__code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  padding: var(--space-4) var(--space-12);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xs);
+}
+
+.process-stage__label {
+  flex: 1;
+  min-width: 0;
+}
+
+.process-stage__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .process-stage__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.process-stage__media {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+}
+
+.process-stage__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.process-stage__activities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .process-stage__activities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.process-stage__activity {
+  position: relative;
+  padding-inline-start: var(--space-16);
+  color: var(--color-ink-secondary);
+}
+
+.process-stage__activity::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: var(--radius-round);
+  background-color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   PROCESS WORKFLOW — Dark section
+   "Your Process or Ours" — ordered 8-step list.
+   -------------------------------------------------------------------------- */
+
+.process-workflow {
+  padding-block: var(--space-48);
+  background-color: var(--color-dark-surface);
+  color: var(--color-dark-ink);
+}
+
+.process-workflow__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 20ch;
+  margin-block-end: var(--space-24);
+}
+
+.process-workflow__heading-line {
+  display: block;
+}
+
+.process-workflow__intro {
+  max-width: 52ch;
+  color: var(--color-dark-ink-secondary);
+  margin-block-end: var(--space-32);
+}
+
+.process-workflow__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.process-workflow__step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-20) var(--space-24);
+  border: 1px solid var(--color-dark-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-dark-canvas);
+}
+
+.process-workflow__step-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.process-workflow__step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent-dark-context);
+  background-color: var(--color-dark-surface-elevated);
+  border: 1px solid var(--color-dark-line);
+  border-radius: var(--radius-round);
+}
+
+.process-workflow__step-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.process-workflow__step-description {
+  color: var(--color-dark-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   PROCESS PRINCIPLES
+   "HOW WE WORK" — 4 principles in a grid.
+   -------------------------------------------------------------------------- */
+
+.process-principles {
+  padding-block: var(--space-48);
+}
+
+.process-principles__heading {
+  max-width: 20ch;
+  margin-block-end: var(--space-32);
+}
+
+.process-principles__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .process-principles__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.process-principles__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.process-principles__title {
+  max-width: 24ch;
+}
+
+.process-principles__description {
+  color: var(--color-ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   PROCESS CTA — Dark section
+   End-of-page call to action.
+   -------------------------------------------------------------------------- */
+
+.process-cta {
+  padding-block: var(--space-64);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+}
+
+.process-cta__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.process-cta__heading {
+  max-width: 20ch;
+}
+
+.process-cta__text {
+  max-width: 52ch;
+  color: var(--color-dark-ink-secondary);
+}
+
+.process-cta__actions {
+  margin-block-start: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .process-hero {
+    padding-block: var(--space-64) var(--space-32);
+  }
+
+  .process-mosaic {
+    padding-block: var(--space-48);
+  }
+
+  .process-stage {
+    padding-block: var(--space-32);
+  }
+
+  .process-workflow {
+    padding-block: var(--space-48);
+  }
+
+  .process-principles {
+    padding-block: var(--space-48);
+  }
+
+  .process-cta {
+    padding-block: var(--space-64);
+  }
+}

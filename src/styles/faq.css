@@ -1,0 +1,136 @@
+/* ==========================================================================
+   faq.css — FAQ Page Styles
+   123.design Design System — BUILD 011
+   ========================================================================== */
+
+/* --- FAQ Hero --- */
+
+.faq-hero {
+  padding-block: var(--space-64) var(--space-40);
+}
+
+.faq-hero__content {
+  max-width: 720px;
+}
+
+.faq-hero__content > * + * {
+  margin-top: var(--space-20);
+}
+
+/* --- FAQ List --- */
+
+.faq-list {
+  padding-block: var(--space-12) var(--space-48);
+}
+
+.faq-list__items {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- FAQ Item (native details/summary) --- */
+
+.faq-item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--color-line);
+}
+
+.faq-item__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-20) 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-ink);
+  list-style: none;
+  user-select: none;
+}
+
+.faq-item__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__question::after {
+  content: '+';
+  flex-shrink: 0;
+  margin-left: var(--space-16);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--color-ink-muted);
+  transition: transform var(--duration-micro) var(--ease-primary);
+}
+
+.faq-item[open] .faq-item__question::after {
+  content: '\2212';
+}
+
+.faq-item__question:hover {
+  color: var(--color-accent);
+}
+
+.faq-item__question:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus-light);
+  outline-offset: calc(-1 * var(--focus-offset));
+  border-radius: var(--radius-xs);
+}
+
+.faq-item__answer {
+  padding-bottom: var(--space-20);
+}
+
+.faq-item__answer p {
+  font-size: clamp(0.9375rem, 1vw, 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-secondary);
+  max-width: 65ch;
+}
+
+/* --- FAQ Empty --- */
+
+.faq-empty {
+  padding-block: var(--space-12) var(--space-48);
+}
+
+.faq-empty__inner {
+  border: 2px dashed var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-48);
+  text-align: center;
+}
+
+/* --- FAQ CTA --- */
+
+.faq-cta {
+  padding-block: var(--space-40) var(--space-48);
+  background-color: var(--color-dark-canvas);
+  color: var(--color-dark-ink);
+  border-top: none;
+}
+
+.faq-cta__inner {
+  text-align: center;
+}
+
+.faq-cta__inner > * + * {
+  margin-top: var(--space-16);
+}
+
+.faq-cta__actions {
+  margin-top: var(--space-24);
+}
+
+.faq-cta .btn[data-variant='secondary'] {
+  border-color: var(--color-dark-line);
+  color: var(--color-dark-ink);
+}
+
+.faq-cta .btn[data-variant='secondary']:hover {
+  border-color: var(--color-dark-ink-secondary);
+}
