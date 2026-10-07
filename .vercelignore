@@ -1,0 +1,20 @@
+# Large media files - host on CDN instead
+public/media/
+
+# Development files
+.git
+.gitignore
+.vercel
+node_modules
+
+# Documentation
+*.md
+!README.md
+
+# Scripts and tools
+scripts/
+tools/
+__pycache__/
+
+# Images and videos archive
+Images & Videos/
